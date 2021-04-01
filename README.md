@@ -1,5 +1,5 @@
 # CSE4314-Senior-Design-I
 
-Topic: Front-end of WatchBuddy App\n
-Author: ChipNSalsa Team\n
-Status: in progress\n
+Topic: Front-end of WatchBuddy App   
+Author: ChipNSalsa Team   
+Status: in progress   
