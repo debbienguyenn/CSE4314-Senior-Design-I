@@ -1,4 +1,4 @@
-
+/**********************General***********************/
 h1{
     color: grey;
 }
@@ -25,14 +25,14 @@ a{
 }
 header{
   height: 100px;
-  background-color:#FDE8DB;
+  background-color:#6892B3;
 }
 section{
-  height: 700px;
-  background-color: white;
-  background-image: url(images/background.png);
+  height: auto;
+  background-color: lightgray;
+  background-image: url(images/b.png);
   background-repeat:no-repeat;
-  background-size: 100%;
+  background-size: auto;
 }
 footer{
   background-color:#17202A;
@@ -64,13 +64,14 @@ nav ul li a{
   text-decoration: none;
 }
 
+/*****************************************************************/
+
 .form-container {
   padding: 50px 60px;
-
 }
 
 .container {
-  height: 200px;
+  height: auto;
   position: relative;
 
 }

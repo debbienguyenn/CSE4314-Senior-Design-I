@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="style.css" type=text/css> 
-    <title >Sign up</title>
+    <title >WatchBuddy - Sign up</title>
 
 </head>
 <body>
-    <header>
+    <section>      
         <div class="container">
             <div class="navbar">
                 <image src="images/logo.jpg" class="logo"></image>
@@ -23,34 +23,30 @@
                 </nav>
             </div>
         </div>
-    </header>
-    <section>
-    <form action="action_page.php" style="border:1px solid #ccc">
-        <div class="container-fluid bg">
-          <h1 style="color:grey"> <br> Sign Up</h1>
-
-          <label style="color:grey">Please fill in this form to create an account.</label>
-          <label style="color:grey" for="email"><b>Email</b></label>
-          <input type="text" placeholder="Enter Email" name="email" style="width: 400px";>
-      
-          <label style="color:grey" for="psw"><b>Password</b></label>
-          <input type="password" placeholder="Enter Password" name="psw" style="width: 400px";>
-      
-          <label style="color:grey" for="psw-repeat"><b>Repeat Password</b></label>
-          <input type="password" placeholder="Repeat Password" name="psw-repeat" style="width: 400px";>
-      
-          <label style="color:grey">
-            <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
-          </label>
-      
-          <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
-      
-          <div class="clearfix">
+        <form class="form-container" action="action_page.php" >
+            <div class="container-fluid bg">
+                <h1 style="color:grey"> <br> Sign Up</h1>
+                <label style="color:grey">Please fill in this form to create an account.</label>
+                <label style="color:grey" for="email"><b>Email</b></label>
+                <input type="text" placeholder="Enter Email" name="email" style="width: 400px";>
             
-            <button type="submit" class="signupbtn" style="width: 400px";>Sign Up</button>
-          </div>
-        </div>
-      </form>
+                <label style="color:grey" for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" style="width: 400px";>
+            
+                <label style="color:grey" for="psw-repeat"><b>Repeat Password</b></label>
+                <input type="password" placeholder="Repeat Password" name="psw-repeat" style="width: 400px";>
+            
+                <label style="color:grey">
+                    <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+                </label>
+            
+                <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+            
+                <div class="clearfix">
+                  <button type="submit" class="signupbtn" style="width: 400px";>Sign Up</button>
+                </div>
+            </div>
+        </form>
     </section>
     <footer>
         <h6>ChipNSalsa</h6>
