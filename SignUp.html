@@ -9,23 +9,37 @@
 
 </head>
 <body>
+    <header>
+        <div class="container">
+            <div class="navbar">
+                <image src="images/logo.jpg" class="logo"></image>
+                <nav>
+                    <ul>
+                        <li><a href="Videos.html">Videos</a></li>
+                        <li><a href="AboutUs.html">About Us</a></li>
+                        <li><a href="Login.html">Login</a></li>
+                        <li><a href="SignUp.html">Sign Up</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <section>
     <form action="action_page.php" style="border:1px solid #ccc">
         <div class="container-fluid bg">
-          <h1 style="color:rgb(252, 252, 252); "> <br> Sign Up</h1>
-        
-          <label>Please fill in this form to create an account.</label>
-          <br>
-      
-          <label for="email"><b>Email</b></label>
+          <h1 style="color:grey"> <br> Sign Up</h1>
+
+          <label style="color:grey">Please fill in this form to create an account.</label>
+          <label style="color:grey" for="email"><b>Email</b></label>
           <input type="text" placeholder="Enter Email" name="email" style="width: 400px";>
       
-          <label for="psw"><b>Password</b></label>
+          <label style="color:grey" for="psw"><b>Password</b></label>
           <input type="password" placeholder="Enter Password" name="psw" style="width: 400px";>
       
-          <label for="psw-repeat"><b>Repeat Password</b></label>
+          <label style="color:grey" for="psw-repeat"><b>Repeat Password</b></label>
           <input type="password" placeholder="Repeat Password" name="psw-repeat" style="width: 400px";>
       
-          <label>
+          <label style="color:grey">
             <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
           </label>
       
@@ -37,7 +51,11 @@
           </div>
         </div>
       </form>
-    
-    
+    </section>
+    <footer>
+        <h6>ChipNSalsa</h6>
+        <p>Senior Design Project<br>University of Texas at Arlington<br>FAQs<p>
+            
+    </footer>
 </body>
 </html>

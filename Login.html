@@ -8,41 +8,50 @@
     <title>Login</title>
 </head>
 <body>
-    <div class="container-xxl bg"> 
-        <form class="form-container">
-   
-          <h1 style="color:rgb(252, 252, 252); "> WatchBuddy Login</h1>
-         
-          <br>
-          <br>
-
-            <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">Email address:</label>
-                
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="example:abc123@gmail.com" style="width: 400px";>
-                <div id="emailHelp" class="form-text">You are secured.</div>
-              </div>
-  
-              <div class="mb-3">
-                <label for="exampleInputPassword1" class="form-label">Password:</label>
-                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" style="width: 400px";>
-              </div>
-              <div class="mb-3 form-check">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                <label class="form-check-label" for="exampleCheck1">Keep me logged in</label>
-              </div>
-              <button type="submit" class="btn btn-success" style="width: 150px"; >Log In</button>
-              <button type="reset" class="btn btn-danger" style="width: 150px";>Forgot password</button>
-              <label> Doesn't have an account?</label>
-              <button type="reset" class="btn btn-success" style="width: 150px";>Register here</button>
-         
-          
-
-        </form>
-
-    </div>
-    
-
-    
+    <header>
+        <div class="container">
+            <div class="navbar">
+                <image src="images/logo.jpg" class="logo"></image>
+                <nav>
+                    <ul>
+                        <li><a href="Videos.html">Videos</a></li>
+                        <li><a href="AboutUs.html">About Us</a></li>
+                        <li><a href="Login.html">Login</a></li>
+                        <li><a href="SignUp.html">Sign Up</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <section>
+        <div class="container-xxl bg"> 
+            <form class="form-container">
+            <h1 style="color:grey"> WatchBuddy Login</h1>
+            <br>
+                <div class="mb-3">
+                    <label style="color:grey" for="exampleInputEmail1" class="form-label">Email address:</label>
+                    
+                    <input  type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="example:abc123@gmail.com" style="width: 400px";>
+                    <div id="emailHelp" class="form-text">Your information is secured with us.</div>
+                </div>
+                <div class="mb-3">
+                    <label style="color:grey" for="exampleInputPassword1" class="form-label">Password:</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" style="width: 400px";>
+                </div>
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label style="color:grey" class="form-check-label" for="exampleCheck1">Keep me logged in</label>
+                </div>
+                <button type="submit" class="btn btn-success" style="width: 150px"; >Log In</button>
+                <button type="reset" class="btn btn-danger" style="width: 150px";>Forgot password</button>
+                <label style="color:grey"> Doesn't have an account?</label>
+                <button type="reset" class="btn btn-success" style="width: 150px";>Register here</button>
+            </form>
+        </div>
+    </section>
+    <footer>
+        <h6>ChipNSalsa</h6>
+        <p>Senior Design Project<br>University of Texas at Arlington<br>FAQs<p>     
+    </footer>
 </body>
 </html>
