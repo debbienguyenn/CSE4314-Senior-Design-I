@@ -41,13 +41,18 @@ footer{
   width: 200px;
   cursor: pointer;
   animation: movedown 1s linear 1;
+  animation-delay: 1s;
+  visibility: hidden;
+  animation-fill-mode: forwards;
 }
 @keyframes movedown{
   0%{
       transform: translate(-100px);
+      visibility: visible;
   }
   100%{
       transform: translate(0);
+      visibility: visible;
   }
 }
 nav{
