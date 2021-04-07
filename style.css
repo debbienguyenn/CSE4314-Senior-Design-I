@@ -44,26 +44,21 @@ footer{
   cursor: pointer;
   animation: movedown 1s linear 1;
   animation-delay: 1s;
-<<<<<<< HEAD
   visibility: hidden;
   animation-fill-mode: forwards;
 }
+
 @keyframes movedown{
   0%{
       transform: translate(-100px);
       visibility: visible;
-=======
-}
-@keyframes movedown{
-  0%{
-      transform: translate(-200px);
->>>>>>> 2c9f5ea00a4462833a0f13e845dff3345b64f0c0
   }
   100%{
       transform: translate(0);
       visibility: visible;
-  }
+    }
 }
+
 nav{
   flex: 1;
   padding-left: 60px;
