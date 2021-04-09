@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="style.css" type=text/css> 
-    <title>Login - WatchBuddy</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="style.css" type=text/css>
+  <title>Login - WatchBuddy</title>
 </head>
+
 <body>
-    <section>      
-        <!--
+  <section>
+    <!--
           <div class="container">
             <div class="row align-items-start justify-content-end">
                 <div class="col-1 text-end">
@@ -22,91 +24,102 @@
         </div>
       -->
 
-        <div class="container">
-            <div class="navbar">
-                <a href="homepage.html"><image src="images/logo.jpg" class="logo"></image></a>
-                <nav style="width:1000px" class="navbar navbar-expand-lg navbar-light bg-light">
-                    <div class="container-fluid">
-                      <a class="navbar-brand" href="#">Home</a>
-                      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                      </button>
-                      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                          <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                              Videos
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                              <li><a class="dropdown-item" href="#">Action</a></li>
-                              <li><a class="dropdown-item" href="#">Another action</a></li>
-                              <li><hr class="dropdown-divider"></li>
-                              <li><a class="dropdown-item" href="#">Something else here</a></li>
-                            </ul>
-                          </li>
-                          <li>
-                          <form class="d-flex">
-                            <input style="width:500px" class="form-control me-2" type="search" placeholder="Search"  aria-label="Search">
-                            <button style="width:100px" class="btn btn-outline-success" type="submit">Search</button>
-                          </form>
-                        </li>
-                        </ul>
-                      </div>
-                    </div>
-
-                    <div class="col-2">
-                      <a href="Login.html">Login</a>
-                      &emsp;
-                      <a href="SignUp.html">Sign Up</a>
-                    </div>
-
-                  </nav>
+    <div class="container">
+      <div class="navbar">
+        <a href="homepage.html">
+          <image src="images/logo.jpg" class="logo"></image>
+        </a>
+        <nav style="width:1000px" class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="homepage.html">Home</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+              aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    Videos
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li>
+                      <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <form class="d-flex">
+                    <input style="width:500px" class="form-control me-2" type="search" placeholder="Search"
+                      aria-label="Search">
+                    <button style="width:100px" class="btn btn-outline-success" type="submit">Search</button>
+                  </form>
+                </li>
+              </ul>
             </div>
+          </div>
+
+          <div class="col-2">
+            <a href="Login.html">Login</a>
+            &emsp;
+            <a href="SignUp.html">Sign Up</a>
+          </div>
+
+        </nav>
+      </div>
+    </div>
+    <div class="container-xxl bg">
+      <form class="form-container">
+        <h1 style="color:black"> WatchBuddy Login</h1>
+        <div class="mb-3">
+          <label style="color:grey" for="exampleInputEmail1" class="form-label">Email address:</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+            placeholder="example:abc123@gmail.com" style="width: 400px" ;>
+          <div id="emailHelp" class="form-text">Your information is secured with us.</div>
         </div>
-        <form class="form-container">
-        <div class="container-xxl bg"> 
-            
-            <h1 style="color:grey"> WatchBuddy Login</h1>
-                <div class="mb-3">
-                    <label style="color:grey" for="exampleInputEmail1" class="form-label">Email address:</label> 
-                    <input  type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="example:abc123@gmail.com" style="width: 400px";>
-                    <div id="emailHelp" class="form-text">Your information is secured with us.</div>
-                </div>
-                <div class="mb-3">
-                    <label style="color:grey" for="exampleInputPassword1" class="form-label">Password:</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" style="width: 400px";>
-                </div>
-                <div class="mb-3 form-check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                    <label style="color:grey" class="form-check-label" for="exampleCheck1">Keep me logged in</label>
-                </div>
-                <button type="submit" class="btn btn-success" style="width: 150px"; >Log In</button>
-                <button type="reset" class="btn btn-danger" style="width: 150px";>Forgot password</button>
-                <label style="color:grey"> Doesn't have an account?</label>
-                <button type="reset" class="btn btn-success" style="width: 150px";>Register here</button>
-            
+        <div class="mb-3">
+          <label style="color:grey" for="exampleInputPassword1" class="form-label">Password:</label>
+          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"
+            style="width: 400px" ;>
         </div>
+        <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          <label style="color:grey" class="form-check-label" for="exampleCheck1">Keep me logged in</label>
+        </div>
+        <button type="submit" class="btn btn-success" style="width: 150px" ;>Log In</button>
+        <button type="reset" class="btn btn-danger" style="width: 150px" ;>Forgot password</button>
+        <label style="color:grey"> Doesn't have an account?</label>
+        <button type="reset" class="btn btn-success" style="width: 150px" ;>Register here</button>
       </form>
-    </section>
-    <footer>
-      <div class="row justify-content-center">
-        <div class="col-1">
-          <h6>ChipNSalsa</h6>
-        </div>
+    </div>
+  </section>
+  <footer>
+    <div class="row justify-content-center">
+      <div class="col-1">
+        <h6>ChipNSalsa</h6>
       </div>
+    </div>
 
-      <div class="row justify-content-center">
-        <div class="col-3">
-          <font size="2" style="color: grey">Senior Design Project | University of Texas at Arlington | <a href="FAQs.html" style="color: grey"><u>FAQs</u></a> | Terms of Use </font>
-        </div>
+    <div class="row justify-content-center">
+      <div class="col-3">
+        <font size="2" style="color: grey">Senior Design Project | University of Texas at Arlington | <a
+            href="FAQs.html" style="color: grey"><u>FAQs</u></a> | Terms of Use </font>
       </div>
+    </div>
 
-      <div class="row justify-content-center">
-        <div class="col-2">
-          <font size="-1" style="color: grey">Designed and built by the <a href="team.html" style="color: grey"><u>ChipsNSalsa Team</u></a>.</font>
-        </div>
+    <div class="row justify-content-center">
+      <div class="col-2">
+        <font size="-1" style="color: grey">Designed and built by the <a href="team.html"
+            style="color: grey"><u>ChipsNSalsa Team</u></a>.</font>
       </div>
+    </div>
 
-    </footer>
+  </footer>
 </body>
+
 </html>
