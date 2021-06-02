@@ -6,6 +6,7 @@ $pswrepeat = $_POST['pswrepeat'];
 
 
 //Database Connection
+//Changed
  
 $conn= new mysqli('localhost','root','test');
 if($conn->connect_error){
