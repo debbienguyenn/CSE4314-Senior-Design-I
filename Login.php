@@ -14,14 +14,14 @@ $result = mysqli_query($conn, $s);
 $num = mysqli_num_rows($result);
 
     if($num==1)
-    {
-        header('location:profile.html');
-        //echo"login successfully";    
+    {  
+        echo '<script>alert("Login Sucessfully")</script>';
+        echo '<script>window.location=\'profile.html\'</script>';
     }
     else
     {
-       header('location:Login.html');
-       //echo"login failed";
+        echo '<script>alert("Incorrect Email or Password")</script>';
+        echo '<script>window.location=\'Login.html\'</script>';
     }
 mysqli_close($conn);
 ?>
