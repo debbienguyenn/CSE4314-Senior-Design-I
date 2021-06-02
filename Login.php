@@ -16,10 +16,12 @@ $num = mysqli_num_rows($result);
     if($num==1)
     {
         header('location:profile.html');
+        //echo"login successfully";    
     }
     else
     {
-        header('location:Login.html');
+       header('location:Login.html');
+       //echo"login failed";
     }
 mysqli_close($conn);
 ?>

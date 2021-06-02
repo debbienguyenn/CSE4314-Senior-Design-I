@@ -65,16 +65,36 @@
 
     <form class="form-container" action="SignUp.php" method="post">
       <div class="container-xxl bg">
-        <h1 style="color:grey">Sign Up</h1>
-        <label style="color:grey">Please fill in this form to create an account.</label>
-        <label style="color:grey" for="email"><b>Email</b></label>
-        <input type="text" placeholder="Enter Email" name="email" style="width: 400px" ; required>
+        <div class="row">
+          <h1 style="color:grey">Sign Up</h1>
+          <label style="color:grey">Please fill in this form to create an account.</label>
+        </div>
 
-        <label style="color:grey" for="psw"><b>Password</b></label>
-        <input type="password" placeholder="Enter Password" name="psw" style="width: 400px" ; required>
+        <div class="row justify-content-center">
+          <div class="col">
+            <label style="color:grey" for="email"><b>Email</b></label>
+            <input type="text" placeholder="Enter Email" name="email" style="width: 400px" ; required>
 
-        <label style="color:grey" for="psw-repeat"><b>Repeat Password</b></label>
-        <input type="password" placeholder="Repeat Password" name="pswrepeat" style="width: 400px" ; required>
+            <label style="color:grey" for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" style="width: 400px" ; required>
+          </div>
+
+          <div class="col">
+            <label style="color:grey" for="firstname"><b>First Name</b></label>
+            <input type="text" placeholder="Enter First Name" name="firstname" style="width: 400px" ; required>
+
+            <label style="color:grey" for="lastname"><b>Last Name</b></label>
+            <input type="text" placeholder="Enter Last Name" name="lastname" style="width: 400px" ; required>
+          </div>
+
+          <div class="col">
+            <label style="color:grey" for="username"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="username" style="width: 400px" ; required>
+
+            <label style="color:grey" for="birthday"><b>Birth Day</b></label>
+            <input type="date" id="birthday" name="birthday" value="2003-01-01" min="1900-01-01" max="2003-01-01">
+          </div>
+        </div>
 
         <label style="color:grey">
           <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
