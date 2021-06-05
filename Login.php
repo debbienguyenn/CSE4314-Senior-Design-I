@@ -7,18 +7,19 @@ $conn= mysqli_connect('localhost:3306','root','', 'sdproject');
 mysqli_select_db($conn, 'registration');
 
 //retrieve user inputs
-$email= filter_input(INPUT_POST, 'email');
+$username= filter_input(INPUT_POST, 'username');
 $psw= filter_input(INPUT_POST, 'psw');
 
 //validate credentials
-$s = "SELECT * from registration where email= '$email' && psw= '$psw'";
+$s = "SELECT * from registration where username= '$username' && psw= '$psw'";
 $result = mysqli_query($conn, $s);
 $num = mysqli_num_rows($result);
 
 if($num==1)
 {  
+    $_SESSION['username'] = $username;
     echo '<script>alert("Login Sucessfully")</script>';
-    echo '<script>window.location=\'profile.html\'</script>';
+    echo '<script>window.location=\'profile.php\'</script>';
 }
 else
 {

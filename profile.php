@@ -1,3 +1,12 @@
+<?php
+    session_start();
+    if(!isset($_SESSION['username']))
+    {
+        header('location:Login.html');
+    }
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -57,7 +66,7 @@
                     <div class="col-2">
                         <a href="HostRoom.html">Host</a>
                         &emsp;
-                        <a href="Login.html">Log Out</a>
+                        <a href="Logout.php">Log Out</a>
                     </div>
                 </nav>
             </div>
@@ -72,7 +81,9 @@
                     </div>
                     <div class="row">
                         <div class="col-6">
-                            <b style="text-align:center; margin-left: 25px;">thinking_emoji</b>
+                            <b style="text-align:center; margin-left: 25px;">
+                                <?php echo $_SESSION['username']; ?>
+                            </b>
                             <p style="text-align:center">I love watching movies with friends.</p>
                         </div>
                     </div>

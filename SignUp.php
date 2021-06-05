@@ -7,15 +7,15 @@ $conn= mysqli_connect('localhost:3306','root','', 'sdproject');
 mysqli_select_db($conn, 'registration');
 
 //retrieve user inputs
-$email= filter_input(INPUT_POST, 'email');
+$username = filter_input(INPUT_POST, 'username');
 $psw= filter_input(INPUT_POST, 'psw');
 $firstname = filter_input(INPUT_POST, 'firstname');
 $lastname = filter_input(INPUT_POST, 'lastname');
-$username = filter_input(INPUT_POST, 'username');
+$email= filter_input(INPUT_POST, 'email');
 $birthday = filter_input(INPUT_POST, 'birthday');
 
 //check if account exists
-$s = "SELECT * from registration where email= '$email'";
+$s = "SELECT * from registration where username='$username' OR email= '$email'";
 $result = mysqli_query($conn, $s);
 $num = mysqli_num_rows($result);
 
@@ -26,7 +26,7 @@ if($num==1)
 }
 else
 {
-    $reg = "INSERT INTO registration(email,psw,firstname, lastname, username, birthday) VALUES('$email','$psw','$firstname', '$lastname', '$username', '$birthday')";
+    $reg = "INSERT INTO registration(username,psw,firstname, lastname, email, birthday) VALUES('$username','$psw','$firstname', '$lastname', '$email', '$birthday')";
     if( mysqli_query($conn, $reg))
     {
         echo '<script>alert("Registration successully!")</script>';
