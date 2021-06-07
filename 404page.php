@@ -1,12 +1,16 @@
+<?php
+  session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="style.css" type=text/css>
-  <title>Login - WatchBuddy</title>
+  <title>Page Not Found - WatchBuddy</title>
 </head>
 
 <body>
@@ -42,7 +46,7 @@
                 </li>
                 <li>
                   <form class="d-flex">
-                    <input style="width:400px" class="form-control me-2" type="search" placeholder="Search"
+                    <input style="width:500px" class="form-control me-2" type="search" placeholder="Search"
                       aria-label="Search">
                     <button style="width:100px" class="btn btn-outline-success" type="submit">Search</button>
                   </form>
@@ -50,63 +54,36 @@
               </ul>
             </div>
           </div>
-
           <div class="col-2">
             <a href="Login.html">Login</a>
             &emsp;
             <a href="SignUp.html">Sign Up</a>
           </div>
-
         </nav>
       </div>
     </div>
-    <form class="form-container" action="Login.php" method="post">
-      <div class="container-xxl bg">
-        <h1 style="color:grey"> WatchBuddy Login</h1>
-        <div class="mb-3">
-          <label style="color:grey" for="username"><b>Username</b></label>
-          <input type="text" placeholder="Enter Username" name="username" style="width: 400px" ; required>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-4" style="text-align: center">
+          <p style="font-size: 200px; color:royalblue">404</p>
         </div>
-        <div class="mb-3">
-          <label style="color:grey" for="psw"><b>Password</b></label>
-          <input type="password" placeholder="Enter Password" name="psw" style="width: 400px" ; required>
-        </div>
-
-        <div class="mb-3 form-check">
-          <input type="checkbox" class="form-check-input" id="exampleCheck1">
-          <label style="color:grey" class="form-check-label" for="exampleCheck1">Keep me logged in</label>
-        </div>
-        <button type="submit" class="btn btn-success" style="width: 150px" ;>Log In</button>
-        <a class="btn btn-danger" href="ForgotPass.html" role="button">Forgot Password</a>
-        <label style="color:grey"> Doesn't have an account?</label>
-        <a class="btn btn-primary" href="SignUp.html" role="button">Register Here</a>
-
-
       </div>
-    </form>
+      <div class="row justify-content-center">
+        <div class="col-6" style="text-align: center">
+          <p style="font-size: 60px; color:royalblue">Oops...Page Not Found!</p>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-2" style="text-align: center">
+          <a href="homepage.html" class="btn btn-primary">Home</a>
+        </div>
+      </div>
+    </div>
+    </div>
   </section>
-  <footer>
-    <div class="row justify-content-center">
-      <div class="col-1">
-        <h6>ChipNSalsa</h6>
-      </div>
-    </div>
-
-    <div class="row justify-content-center">
-      <div class="col-4">
-        <font size="2" style="color: grey">Senior Design Project | University of Texas at Arlington | <a
-            href="FAQs.html" style="color: grey"><u>FAQs</u></a> | Terms of Use </font>
-      </div>
-    </div>
-
-    <div class="row justify-content-center">
-      <div class="col-3">
-        <font size="-1" style="color: grey">Designed and built by the <a href="team.html"
-            style="color: grey"><u>ChipsNSalsa Team&copy;</u></a>.</font>
-      </div>
-    </div>
-
-  </footer>
+  <?php
+        include('footer.php');
+  ?>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
   integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>

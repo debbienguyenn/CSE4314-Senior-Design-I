@@ -1,12 +1,15 @@
+<?php
+  session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="css/bootstrap.css">
+  <title> About Us - WatchBuddy </title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="style.css" type=text/css>
-  <title>Page Not Found - WatchBuddy</title>
+
 </head>
 
 <body>
@@ -51,55 +54,20 @@
             </div>
           </div>
           <div class="col-2">
-            <a href="Login.html">Login</a>
+            <a href="Login.php">Login</a>
             &emsp;
-            <a href="SignUp.html">Sign Up</a>
+            <a href="SignUp.php">Sign Up</a>
           </div>
         </nav>
       </div>
     </div>
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-4" style="text-align: center">
-          <p style="font-size: 200px; color:royalblue">404</p>
-        </div>
-      </div>
-      <div class="row justify-content-center">
-        <div class="col-6" style="text-align: center">
-          <p style="font-size: 60px; color:royalblue">Oops...Page Not Found!</p>
-        </div>
-      </div>
-      <div class="row justify-content-center">
-        <div class="col-2" style="text-align: center">
-          <a href="homepage.html" class="btn btn-primary">Home</a>
-        </div>
-      </div>
-    </div>
-    </div>
+
   </section>
-  <footer>
-    <div class="row justify-content-center">
-      <div class="col-1">
-        <h6>ChipNSalsa</h6>
-      </div>
-    </div>
-
-    <div class="row justify-content-center">
-      <div class="col-4">
-        <font size="2" style="color: grey">Senior Design Project | University of Texas at Arlington | <a
-            href="FAQs.html" style="color: grey"><u>FAQs</u></a> | Terms of Use </font>
-      </div>
-    </div>
-
-    <div class="row justify-content-center">
-      <div class="col-3">
-        <font size="-1" style="color: grey">Designed and built by the <a href="team.html"
-            style="color: grey"><u>ChipsNSalsa Team&copy;</u></a>.</font>
-      </div>
-    </div>
-
-  </footer>
+  <?php
+        include('footer.php');
+    ?>
 </body>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
   integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
 
