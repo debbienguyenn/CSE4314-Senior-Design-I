@@ -17,12 +17,12 @@
   <section>
     <div class="container">
       <div class="navbar">
-        <a href="homepage.html">
+        <a href="Homepage.php">
           <image src="images/logo.jpg" class="logo"></image>
         </a>
         <nav style="width:1000px" class="navbar navbar-expand-lg navbar-light bg-light">
           <div class="container-fluid">
-            <a class="navbar-brand" href="homepage.html">Home</a>
+            <a class="navbar-brand" href="Homepage.php">Home</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
               data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
               aria-label="Toggle navigation">
@@ -55,9 +55,9 @@
             </div>
           </div>
           <div class="col-2">
-            <a href="Login.html">Login</a>
+            <a href="Login.php">Login</a>
             &emsp;
-            <a href="SignUp.html">Sign Up</a>
+            <a href="SignUp.php">Sign Up</a>
           </div>
         </nav>
       </div>
@@ -75,7 +75,7 @@
       </div>
       <div class="row justify-content-center">
         <div class="col-2" style="text-align: center">
-          <a href="homepage.html" class="btn btn-primary">Home</a>
+          <a href="Homepage.php" class="btn btn-primary">Home</a>
         </div>
       </div>
     </div>

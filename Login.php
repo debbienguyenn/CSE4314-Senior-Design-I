@@ -17,12 +17,12 @@
   <section>
     <div class="container">
       <div class="navbar">
-        <a href="homepage.html">
+        <a href="Homepage.php">
           <image src="images/logo.jpg" class="logo"></image>
         </a>
         <nav style="width:1000px" class="navbar navbar-expand-lg navbar-light bg-light">
           <div class="container-fluid">
-            <a class="navbar-brand" href="homepage.html">Home</a>
+            <a class="navbar-brand" href="Homepage.php">Home</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
               data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
               aria-label="Toggle navigation">
@@ -56,9 +56,9 @@
           </div>
 
           <div class="col-2">
-            <a href="Login.html">Login</a>
+            <a href="Login.php">Login</a>
             &emsp;
-            <a href="SignUp.html">Sign Up</a>
+            <a href="SignUp.php">Sign Up</a>
           </div>
 
         </nav>
@@ -81,9 +81,9 @@
           <label style="color:grey" class="form-check-label" for="exampleCheck1">Keep me logged in</label>
         </div>
         <button type="submit" class="btn btn-success" style="width: 150px" ;>Log In</button>
-        <a class="btn btn-danger" href="ForgotPass.html" role="button">Forgot Password</a>
+        <a class="btn btn-danger" href="ForgotPass.php" role="button">Forgot Password</a>
         <label style="color:grey"> Doesn't have an account?</label>
-        <a class="btn btn-primary" href="SignUp.html" role="button">Register Here</a>
+        <a class="btn btn-primary" href="SignUp.php" role="button">Register Here</a>
 
 
       </div>

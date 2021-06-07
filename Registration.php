@@ -22,7 +22,7 @@ $num = mysqli_num_rows($result);
 if($num==1)
 {
     echo '<script>alert("Email or Username exists")</script>';
-    echo '<script>window.location=\'SignUp.html\'</script>';
+    echo '<script>window.location=\'SignUp.php\'</script>';
 }
 else
 {
