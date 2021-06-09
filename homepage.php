@@ -10,12 +10,6 @@
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="style.css" type=text/css>
   <style>
-    section {
-      height: 700px;
-    }
-  </style>
-
-  <style>
     footer {
       color: grey
     }

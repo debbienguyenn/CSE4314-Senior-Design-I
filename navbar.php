@@ -21,9 +21,9 @@
                     Videos
                   </a>
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="Funny.html">Funny</a></li>
-                    <li><a class="dropdown-item" href="Anime.html">Anime</a></li>
-                    <li><a class="dropdown-item" href="Horror.html">Horror</a></li>
+                    <li><a class="dropdown-item" href="Funny.php">Funny</a></li>
+                    <li><a class="dropdown-item" href="Anime.php">Anime</a></li>
+                    <li><a class="dropdown-item" href="Horror.php">Horror</a></li>
                     <li>
                       <hr class="dropdown-divider">
                     </li>
