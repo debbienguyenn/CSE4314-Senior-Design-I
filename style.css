@@ -42,7 +42,7 @@ footer{
   background-color:rgb(241, 242, 243);
 }
 .logo{
-  
+  width: 200px;
   cursor: pointer;
   animation: movedown 1s linear 1;
   animation-delay: 1s;
