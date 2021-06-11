@@ -42,7 +42,8 @@
             <input type="text" placeholder="Enter Username" name="username" style="width: 400px" ; required>
 
             <label style="color:grey" for="psw"><b>Password</b></label>
-            <input type="password" placeholder="Enter Password" name="psw" style="width: 400px" ; required>
+            <input type="password" placeholder="Enter Password" name="psw" style="width: 400px" pattern="^(?=.*[A-Za-z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,32}$"  required>
+          <span><small><br>At least one number, and one special charcter from !@#$%^&*_=+- with a length of 8 characters is required<br></small></span>
           </div>
 
           <div class="col">
