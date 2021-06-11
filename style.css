@@ -32,8 +32,7 @@ header{
 }
 section{
   height: auto;
-  background-color: lightgray;
-  /*background-image: url(images/b1.jpg);*/
+  background-color: white;
   background-repeat:no-repeat;
   background-size: auto;
 }
