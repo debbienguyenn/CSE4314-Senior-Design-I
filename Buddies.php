@@ -75,7 +75,7 @@
           /*Change or add to this portion*/
            $('#buddy').val($(this).text());  
            $('#buddiesList').fadeOut();  
-      });  
+      }); 
  });  
  </script>  
  </div>
