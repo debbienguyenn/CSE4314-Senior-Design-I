@@ -30,12 +30,15 @@
                    
                   </ul>
                 </li>
+                <!--search bar-->
                 <li>
                   <form class="d-flex">
-                    <input style="width:400px" class="form-control me-2" type="search" placeholder="Search"
+                    <input style="width:400px" class="form-control me-2" type="search" placeholder="Search for buddies.."
                       aria-label="Search">
                     <button style="width:100px" class="btn btn-outline-success" type="submit">Search</button>
                   </form>
+                  
+                  
                 </li>
               </ul>
             </div>

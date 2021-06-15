@@ -13,6 +13,7 @@
 <head>
     <title> My Profile - WatchBuddy </title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <link rel="stylesheet" href="style.css" type=text/css>
     <style>
         section {
@@ -56,6 +57,8 @@
                 </div>
                 <div class="col-3">
                     <h3 style="color:3F454C; text-align: center;">Buddies</h3>
+                    <button style="width:300px" class="btn btn-outline-success" type="submit" id="button_clicked"href="Buddies.php">Find Buddies</button>
+        
                 </div>
             </div>
         </div>
@@ -71,3 +74,8 @@
     crossorigin="anonymous"></script>
 
 </html>
+
+<script>
+$('#button_clicked').on('click', function() { window.location = 'Buddies.php'; });
+</script>
+        
