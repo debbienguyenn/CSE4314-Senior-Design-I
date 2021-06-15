@@ -45,8 +45,6 @@
 </body>
 
 <!--script for searching for a buddy-->
-<div class="container">
-    <div classs="row justify-content-center">
 <script>  
  $(document).ready(function(){  
       $('#buddy').keyup(function(){  
@@ -78,7 +76,5 @@
       }); 
  });  
  </script>  
- </div>
-</div>
 </html>
 
