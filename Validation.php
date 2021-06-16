@@ -18,6 +18,7 @@ $num = mysqli_num_rows($result);
 if($num==1)
 {  
     $_SESSION['username'] = $username;
+    $_SESSION['bio'] = $result['bio'];
     echo '<script>alert("Login Sucessfully")</script>';
     echo '<script>window.location=\'profile.php\'</script>';
 }

@@ -40,7 +40,7 @@
               echo '<div class="col-2">
               <a href="profile.php">Me</a>
               &emsp;
-              <a href="Host.php">Host</a>
+              <a href="Meet.php">Meet</a>
               &emsp;
               <a href="Logout.php">Log out</a>
               </div>';
