@@ -25,33 +25,6 @@
       include('navbar.php');
     ?>
 
-          <!--Replace Login and Sign Up links when logged in-->
-          <?php
-            if(!isset($_SESSION['username']))
-            {
-              echo '<div class="col-2">
-              <a href="Login.php">Login</a>
-              &emsp;
-              <a href="SignUp.php">Sign Up</a>
-              </div>';
-            }
-            else
-            {
-              echo '<div class="col-2">
-              <a href="profile.php">Me</a>
-              &emsp;
-              <a href="Meet.php">Meet</a>
-              &emsp;
-              <a href="Logout.php">Log out</a>
-              </div>';
-            }
-          ?>
-          
-
-        </nav>
-      </div>
-    </div>
-
     <div class="container">
       <div class="row justify-content-end">
         <div class="col-4">

@@ -6,7 +6,6 @@
     }
 ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -27,14 +26,6 @@
     <?php
       include('navbar.php');
     ?>
-                    <div class="col-2">
-                        <a href="HostRoom.php">Host</a>
-                        &emsp;
-                        <a href="Logout.php">Log Out</a>
-                    </div>
-                </nav>
-            </div>
-
         </div>
         <div class="container">
             <div class="row justify-content-center">
@@ -56,8 +47,8 @@
             -->
             <div class="col-3" style="border-right: 1px solid lightgrey; height:500px">
                 <!--Display-->
-                <img src="images/users/<?php echo $_SESSION['userImage']; ?>" alt="" 
-                width="100px" height="100px">
+                <img style="border-radius: 50%" src="images/users/<?php echo $_SESSION['userImage']; ?>" alt="" 
+                width="120px" height="120px">
                 <b style="text-align:center; margin-left: 25px;">
                 <?php echo $_SESSION['username']; ?>
                 </b>

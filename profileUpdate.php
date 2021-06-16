@@ -5,7 +5,7 @@ session_start();
 
 if(isset($_POST['update'])){
 
-    $conn= mysqli_connect('localhost:3306','root','', 'sdproject');
+    include('db.php');
     mysqli_select_db($conn, 'registration');
 
          $userImage    =   $_FILES['userImage'];

@@ -20,13 +20,6 @@
       include('navbar.php');
     ?>
 
-          <div class="col-2">
-            <a href="SignUp.php">Sign Up</a>
-          </div>
-
-        </nav>
-      </div>
-    </div>
     <form class="form-container" action="Validation.php" method="post">
       <div class="container-xxl bg">
         <h1 style="color:grey"> WatchBuddy Login</h1>
