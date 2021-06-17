@@ -16,7 +16,7 @@
 
 <body>
   <section>
-  <?php
+    <?php
       include('navbar.php');
     ?>
 
