@@ -38,7 +38,7 @@
             else
             {
               echo '<div class="col-2">
-              <a href="profile.php">Me</a>
+              <a href="profile.php">Profile</a>
               &emsp;
               <a href="Host.php">Host</a>
               &emsp;

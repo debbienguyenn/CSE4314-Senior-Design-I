@@ -23,8 +23,31 @@
         <?php
             include('navbar.php');
         ?>
-        </nav>
         
+        <!--Replace Login and Sign Up links when logged in-->
+        <?php
+            if(!isset($_SESSION['username']))
+            {
+              echo '<div class="col-2">
+              <a href="Login.php">Login</a>
+              &emsp;
+              <a href="SignUp.php">Sign Up</a>
+              </div>';
+            }
+            else
+            {
+              echo '<div class="col-2">
+              <a href="Host.php">Host</a>
+              &emsp;
+              <a href="Join.php">Join</a>
+              &emsp;
+              <a href="Logout.php">Log out</a>
+              </div>';
+            }
+        ?>
+
+        </nav>
+
         <div class="container">
             <div class="row justify-content-center">
                 <h2 align="center">Add Buddies!</h2>
@@ -57,20 +80,25 @@
                      data:{query:query},  
                      success:function(data)  
                      {  
-                          $('#buddiesList').fadeIn();  
-                          $('#buddiesList').html(data);  
+                          /*comment by Debbie: not fading out when search is empty after typing something. FIX*/
+                          //fixed: 06/18/2021
+                          if($('#buddy').val() == '')
+                          {
+                            $('#buddiesList').fadeOut(); 
+                          }
+                          else
+                          {
+                            $('#buddiesList').fadeIn();  
+                            $('#buddiesList').html(data);
+                          } 
                      }  
                 });  
            }
-           /*comment by Debbie: not fading out when search is empty after typing something. FIX*/
-           else if(query == 8 && $('#buddy').val($(this).text()) == '')
-           {
-            $('#buddiesList').fadeOut();  
-           }
+
       });  
-      $(document).on('click', 'li', function(){  
-          /*When user searches and clicks name on drop-down, it changes the text in search-bar to the name clicked*/
-          /*Change or add to this portion*/
+      $(document).on('click', 'button', function(){  
+          /*When user searches and clicks add buddy on results, it changes the text in search-bar to the button name for now*/
+          /*Change and add to this portion - connect to database to add/delete friends*/
            $('#buddy').val($(this).text());  
            $('#buddiesList').fadeOut();  
       }); 
