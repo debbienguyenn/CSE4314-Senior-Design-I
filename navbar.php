@@ -55,8 +55,8 @@
             }
             else
             {
-              echo '<div class="col-2">
-              <a href="profile.php">Me</a>
+              echo '<div class="col-3">
+              <a href="profile.php">Profile</a>
               &emsp;
               <a href="Meet.php">Meet</a>
               &emsp;
