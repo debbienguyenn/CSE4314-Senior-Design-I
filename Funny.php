@@ -21,30 +21,6 @@
       include('navbar.php');
     ?>
 
-<<<<<<< HEAD
-          <!--Replace Login and Sign Up links when logged in-->
-          <?php
-            if(!isset($_SESSION['username']))
-            {
-              echo '<div class="col-2">
-              <a href="Login.php">Login</a>
-              &emsp;
-              <a href="SignUp.php">Sign Up</a>
-              </div>';
-            }
-            else
-            {
-              echo '<div class="col-2">
-              <a href="profile.php">Profile</a>
-              &emsp;
-              <a href="Host.php">Host</a>
-              &emsp;
-              <a href="Logout.php">Log out</a>
-              </div>';
-            }
-          ?>
-          
-=======
     <form class="form-container" action="SaveVideo.php" method="post">
         <div class="container">
             <h1> Funny Videos</h1>
@@ -71,7 +47,6 @@
                     <div>
                         <button type="submit" class="btn btn-success" style="width: 80px" ;>Save</button>
                     </div>
->>>>>>> c901614c0286725802def8673e2f52e3a85f3e4e
 
                 </div>
                 <div class="col-sm" align="center">
