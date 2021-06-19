@@ -17,14 +17,6 @@
   <?php
       include('navbar.php');
     ?>
-          <div class="col-2">
-            <a href="Login.php">Login</a>
-            &emsp;
-            <a href="SignUp.php">Sign Up</a>
-          </div>
-        </nav>
-      </div>
-    </div>
 
   </section>
   <?php

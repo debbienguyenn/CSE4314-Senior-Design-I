@@ -6,7 +6,6 @@
     }
 ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -27,17 +26,10 @@
     <?php
       include('navbar.php');
     ?>
-                    <div class="col-2">
-                        <a href="HostRoom.php">Host</a>
-                        &emsp;
-                        <a href="Logout.php">Log Out</a>
-                    </div>
-                </nav>
-            </div>
-
         </div>
         <div class="container">
             <div class="row justify-content-center">
+                <!--
                 <div class="col-3" style="border-right: 1px solid lightgrey; height:500px">
                     <div class="row justify-content-center">
                         <img src="images/profile.jpg"
@@ -46,12 +38,41 @@
                     <div class="row justify-content-center">
                         <div class="col-6">
                             <b style="text-align:center; margin-left: 25px;">
-                                <?php echo $_SESSION['username']; ?>
+                                 <?php echo $_SESSION['username']; ?>
                             </b>
                             <p style="text-align:center">I love watching movies with friends.</p>
                         </div>
                     </div>
                 </div>
+            -->
+            <div class="col-3" style="border-right: 1px solid lightgrey; height:500px">
+                <!--Display-->
+                <img style="border-radius: 50%" src="images/users/<?php echo $_SESSION['userImage']; ?>" alt="" 
+                width="120px" height="120px">
+                <b style="text-align:center; margin-left: 25px;">
+                <?php echo $_SESSION['username']; ?>
+                </b>
+                <p style="text-align:center"><?php echo $_SESSION['bio']; ?></p>
+
+                <!--Update form-->
+                <form action="profileUpdate.php"
+                        method="POST"
+                        enctype="multipart/form-data"
+                >
+                <div class="form-group">
+                    <label style="color:grey" for="userImage"><b>Profile Picture</b></label>
+                    <input type="file" name="userImage" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label style="color:grey" for="bio"><b>Update Bio</b></label>
+                    <input type="text" name="bio" class="form-control" >
+                </div>
+                <div class="form-group">
+                    <input type="submit" name="update"  class="btn btn-info" value="Update">
+                </div>
+
+                </form>
+            </div>
                 <div class="col-6" style="border-right: 1px solid lightgrey; height:500px;">
                     <h1 style="color:3F454C; text-align: center;">Watch List</h1>
                 </div>

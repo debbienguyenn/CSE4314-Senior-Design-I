@@ -3,7 +3,7 @@
 session_start();
 
 //database connection
-$conn= mysqli_connect('localhost:3306','root','', 'sdproject');
+include('db.php');
 mysqli_select_db($conn, 'registration');
 
 //retrieve user inputs
@@ -14,10 +14,13 @@ $psw= filter_input(INPUT_POST, 'psw');
 $s = "SELECT * from registration where username= '$username' && psw= '$psw'";
 $result = mysqli_query($conn, $s);
 $num = mysqli_num_rows($result);
-
+$row = mysqli_fetch_assoc($result);
 if($num==1)
 {  
     $_SESSION['username'] = $username;
+    $_SESSION['userImage'] = isset($row['userImage']) ? $row['userImage'] : null;
+    $_SESSION['bio'] = $row['bio'];
+
     echo '<script>alert("Login Sucessfully")</script>';
     echo '<script>window.location=\'profile.php\'</script>';
 }

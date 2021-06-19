@@ -20,10 +20,7 @@
       include('navbar.php');
     ?>
 
-          <div class="col-2">
-            <a href="Login.php">Login</a>
-            
-          </div>
+         
 
         </nav>
       </div>

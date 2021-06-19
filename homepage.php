@@ -25,6 +25,7 @@
       include('navbar.php');
     ?>
 
+<<<<<<< HEAD
           <!--Replace Login and Sign Up links when logged in-->
           <?php
             if(!isset($_SESSION['username']))
@@ -52,6 +53,8 @@
       </div>
     </div>
 
+=======
+>>>>>>> c901614c0286725802def8673e2f52e3a85f3e4e
     <div class="container">
       <div class="row justify-content-end">
         <div class="col-4">

@@ -3,7 +3,7 @@
 session_start();
 
 //database connection
-$conn= mysqli_connect('localhost:3306','root','', 'sdproject');
+include('db.php');
 mysqli_select_db($conn, 'registration');
 
 //retrieve user inputs

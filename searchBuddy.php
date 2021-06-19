@@ -1,5 +1,5 @@
 <?php  
- $connect = mysqli_connect('localhost:3306', 'root', '', 'sdproject');  
+ include('db.php'); 
  
  if(isset($_POST["query"]))  
  {  
