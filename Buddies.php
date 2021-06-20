@@ -1,7 +1,15 @@
 <?php
   session_start();
-?>
 
+  if(isset($_POST["findBuddiesbtn"]))
+  {
+    $search_query = preg_replace("#[^a-z 0-9?!]#i", "", $_POST["buddy"]);
+
+    Buddies('location:searchBuddies.php?query='.urlencode($search_query).'');
+  }
+
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -31,19 +39,16 @@
                 <div class="row justify-content-center">
                     <input style="width:600px" class="form-control me-2" type="text" placeholder="Search for buddies.."
                         name="buddy" id="buddy">
-                    <!--<button style="width:150px" class="btn btn-outline-success" type="submit">Search</button>-->
+                        <button style="width:300px" class="btn btn-outline-success" type="submit" id="findBuddiesbtn" href="searchBuddies.php" name="findBuddiesbtn">Search Buddies</button>
                     <div id="buddiesList"></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <?php
-        include('footer.php');
-    ?>
 </body>
 
-<!--script for searching for a buddy-->
+<!--script for searching for a buddy using autocomplete search textbox-->
 <script>  
  $(document).ready(function(){  
       $('#buddy').keyup(function(){  
@@ -51,7 +56,7 @@
            if(query != '' || query != 8 || query != 46)  
            {  
                 $.ajax({  
-                     url:"searchBuddy.php",  
+                     url:"search_action.php",  
                      method:"POST",  
                      data:{query:query},  
                      success:function(data)  
@@ -72,10 +77,12 @@
            }
 
       });  
-      $(document).on('click', 'button', function(){  
+      //$(document).on('click', 'button', function()
+      $(document).on('click', 'li', function()
+      {  
           /*When user searches and clicks add buddy on results, it changes the text in search-bar to the button name for now*/
           /*Change and add to this portion - connect to database to add/delete friends*/
-           $('#buddy').val($(this).text());  
+           $('#buddy').val($(this).text());
            $('#buddiesList').fadeOut();  
       }); 
  });  
