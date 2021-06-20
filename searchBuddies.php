@@ -1,11 +1,11 @@
 <?php
 
  //database connection
- $connect = mysqli_connect('localhost:3306', 'root', '', 'sdproject');  
- 
+ //$connect = mysqli_connect('localhost:3306', 'root', '', 'sdproject');  
+
 if(isset($_GET["query"]))
  {
-      $query = urlencode($_GET["query"]);
+      $query = urldecode($_GET["query"]);
 
       $query = preg_replace("#[^a-z 0-9?!]#i", "", $query);
  }
