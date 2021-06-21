@@ -85,6 +85,7 @@
            $('#buddy').val($(this).text());
            $('#buddiesList').fadeOut();  
       }); 
+      
  });  
  </script>  
 </html>
