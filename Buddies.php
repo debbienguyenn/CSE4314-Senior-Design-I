@@ -31,19 +31,20 @@
         <?php
             include('navbar.php');
         ?>
-
+      <form class="form-container" action="searchBuddies.php" method="post">
         <div class="container">
             <div class="row justify-content-center">
-                <h2 align="center">Add Buddies!</h2>
-                <h4 class="col-6">Enter Buddy's Username</h4>
-                <div class="row justify-content-center">
-                    <input style="width:600px" class="form-control me-2" type="text" placeholder="Search for buddies.."
-                        name="buddy" id="buddy">
-                        <button style="width:300px" class="btn btn-outline-success" type="submit" id="findBuddiesbtn" href="searchBuddies.php" name="findBuddiesbtn">Search Buddies</button>
-                    <div id="buddiesList"></div>
-                </div>
+              <h2 align="center">Add Buddies!</h2>
+              <h4 class="col-6">Enter Buddy's Username</h4>
+              <div class="row justify-content-center">
+                <input style="width:600px" class="form-control me-2" type="text" placeholder="Search for buddies.."
+                          name="buddy" id="buddy">
+                <button style="width:300px" class="btn btn-outline-success" type="submit" id="findBuddiesbtn" href="searchBuddies.php" name="findBuddiesbtn">Search Buddies</button>
+              <div id="buddiesList"></div>
             </div>
         </div>
+      </form>
+
     </section>
 
 </body>

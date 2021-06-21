@@ -69,9 +69,9 @@
       $query = "SELECT * FROM username WHERE ".$condition." AND username != '".$_SESSION["username"]."'";
 
 
-      $filter_query = $query . ' LIMIT ' .$start.', '.limit.'';
+      $filter_query = $query . ' LIMIT ' .$start.', '.$limit.'';
 
-      $statement = connect->prepare($query);
+      $statement = $connect->prepare($query);
 
       //execute query.
       $statement->execute();
