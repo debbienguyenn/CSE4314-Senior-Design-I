@@ -2,13 +2,15 @@
  <?php  
 
  //database connection
- $connect = mysqli_connect('localhost:3306', 'root', '', 'sdproject');  
+ include('db.php');
+ mysqli_select_db($conn, 'buddies');
  
+ /****************************Autocompletion when searching for buddies**************************/
  if(isset($_POST["query"]))  
  {  
       $output = '';  
       $query = "SELECT * FROM registration WHERE username LIKE '%".$_POST["query"]."%' ORDER BY username ASC";  
-      $result = mysqli_query($connect, $query);  
+      $result = mysqli_query($conn, $query);  
       $output = '<ul class="list-unstyled" style="text-align: center">';  
       if(mysqli_num_rows($result) > 0)  
       {  
@@ -32,6 +34,38 @@
       echo $output;  
  }
 
+ /***************************************Adding a buddy****************************************/
+//retrieving buddy's username from input
+$buddy = filter_input(INPUT_POST, 'buddy');
+$username = $_SESSION['username'];
+
+//check if buddy is already added to user
+$s = "SELECT * from buddies where userID = '$username' AND buddyID = '$buddy'";
+$result = mysqli_query($conn, $s);
+$num = mysqli_num_rows($result);
+
+if($num==1)
+{
+     echo '<script>alert("Buddy previously added!")</script>';
+     echo '<script>window.location=\'Buddies.php\'</script>';
+}
+else
+{
+     $add = "INSERT INTO buddies(userID, buddyID) VALUES('$username','$buddy')";
+     if(mysqli_query($conn, $add))
+     {
+          echo '<script>alert("Buddy Added!")</script>';
+          echo '<script>window.location=\'Buddies.php\'</script>';
+     }
+     else
+     {
+          echo "failed";
+     }
+}
+mysqli_close($conn);
+?>
+
+ <!--
  if(isset($_POST["query_result"]))
  {
       $output = '';
@@ -126,6 +160,7 @@
       Creating the page links at bottom of page if there are more than five results,
          since only five results will appear on a page at a time. 
       *********************************************************/
+      
       $output .= '
       <br/>
       <div align="center">
@@ -264,3 +299,4 @@
       echo $output;
  }
  /************************************End of Page Links*****************************************************/
+ -->
