@@ -14,11 +14,8 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <link rel="stylesheet" href="style.css" type=text/css>
-    <style>
-        section {
-            height: 700px;
-        }
-    </style>
+    
+    
 </head>
 
 <body>
@@ -75,6 +72,75 @@
             </div>
                 <div class="col-6" style="border-right: 1px solid lightgrey; height:500px;">
                     <h1 style="color:3F454C; text-align: center;">Watch List</h1>
+                    <!--
+                    <div class="row">
+                        <div class="card">
+                            <div class = "iframe-container">
+                            <iframe width="400" height="240" 
+                            src=" -->
+                            <?php
+                                include('db.php');
+                                //get saved video ID
+                                mysqli_select_db($conn, 'likedVideos');
+                                $username = $_SESSION['username'];
+                                $video_query = "SELECT videoID from likedVideos where username = '$username' ";
+                                $video_result = mysqli_query($conn, $video_query);
+                                //$video_list = mysqli_fetch_assoc($video_result);
+                                //$videoID = $video_list[0]['videoID'];
+                                $video_list = array();
+                                if(mysqli_num_rows($video_result)>0)
+                                {
+                                    while($list = mysqli_fetch_assoc($video_result))
+                                    {
+                                        $video_list[] = $list;
+                                    }
+                                }
+                                   // print_r($video_list);
+                                //retrieve video links
+                                
+                                $link_list =  array();
+                                foreach($video_list as $videoID)
+                                {  
+                                    mysqli_select_db($conn, 'likedVideos');
+                                    $videoID = $videoID['videoID'];
+                                    $link_query = "SELECT link from videos where videoID = '$videoID'";
+                                    $link_result = mysqli_query($conn, $link_query);
+                                    if(mysqli_num_rows($link_result)>0)
+                                    {
+                                        //while($links = mysqli_fetch_assoc($link_result))
+                                        // {
+                                        //     $link_list[$i] = $links;
+                                            
+                                        // }
+                                        $links = mysqli_fetch_assoc($link_result);
+                                        $link_list[] = $links;
+                                    }
+                                    
+                                    //echo $link_list['link'];
+                                }
+                                
+                               foreach($link_list as $links)
+                               {
+                                //print_r($link_list);
+                                $link = $links['link'];
+                                
+                                 $html = '<div class="row">
+                                 <div class="card">
+                                     <div class = "iframe-container">
+                                     <iframe width="400" height="240" 
+                                     src="'.$link.'"title="YouTube video player" frameborder="0" 
+                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
+                                     gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                     </div>
+                                 </div>';
+                                 echo $html;
+                               }
+                            ?>
+                           <!--
+                            title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                        
+                            </div>
+                        </div> -->
+                    </div>
                 </div>
                 <div class="col-3">
                     <h3 style="color:3F454C; text-align: center;">Buddies</h3>

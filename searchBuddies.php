@@ -3,9 +3,9 @@
  //database connection
  //$connect = mysqli_connect('localhost:3306', 'root', '', 'sdproject');  
 
-if(isset($_GET["query"]))
+if(isset($_SESSION['query']))
  {
-      $query = urldecode($_GET["query"]);
+      $query = urldecode($_SESSION['query']);
 
       $query = preg_replace("#[^a-z 0-9?!]#i", "", $query);
  }

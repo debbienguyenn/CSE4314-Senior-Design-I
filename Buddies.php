@@ -53,7 +53,8 @@
 <script>  
  $(document).ready(function(){  
       $('#buddy').keyup(function(){  
-           var query = $(this).val();  
+           var query = $(this).val();
+           $_SESSION['query'] = query;  
            if(query != '' || query != 8 || query != 46)  
            {  
                 $.ajax({  
