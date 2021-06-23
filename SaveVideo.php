@@ -10,11 +10,12 @@ $saved = "INSERT INTO likedVideos(Username,videoID) VALUES('$username','$id')";
     if( mysqli_query($conn, $saved))
     {
         echo '<script>alert("Saved successully!")</script>';
+        header('location:profile.php');
        
     }
     else
     {
-        echo"Fail";
+        echo"Video is already saved!";
     }
 mysqli_close($conn);
 

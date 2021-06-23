@@ -31,7 +31,7 @@ header{
   background-color:#6892B3;
 }
 section{
-  height: auto;
+  height: 100%;
   background-color: white;
   background-repeat:no-repeat;
   background-size: auto;
@@ -39,6 +39,11 @@ section{
 footer{
   /*background-color:#17202A;*/
   background-color:rgb(241, 242, 243);
+  position:relative;
+   bottom:0;
+   width:100%;
+   height:auto;
+   padding: 10px 10px 0px 10px;
 }
 .logo{
   width: 200px;

@@ -14,7 +14,12 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <link rel="stylesheet" href="style.css" type=text/css>
-     
+     <style>
+         footer
+         {
+             position: fixed;
+         }
+     </style>
 </head>
 
 <body>
@@ -24,22 +29,6 @@
         ?>
         <div class="container">
             <div class="row justify-content-center">
-                <!--
-                <div class="col-3" style="border-right: 1px solid lightgrey; height:500px">
-                    <div class="row justify-content-center">
-                        <img src="images/profile.jpg"
-                            style="width: 200px; height: 200px;border-radius: 50px; border: 2px solid lightgrey;">
-                    </div>
-                    <div class="row justify-content-center">
-                        <div class="col-6">
-                            <b style="text-align:center; margin-left: 25px;">
-                                
-                            </b>
-                            <p style="text-align:center">I love watching movies with friends.</p>
-                        </div>
-                    </div>
-                </div>
-                -->
                 <!--first column-->
                 <div class="col-3" style="border-right: 1px solid lightgrey; height:500px">
                     <!--Display-->
@@ -119,7 +108,8 @@
                                 gyroscope; picture-in-picture" allowfullscreen></iframe>
                                 </div>
                             </div>
-                            </div>';
+                            </div>
+                            &emsp;';
                             echo $html;
                         }
                     ?>

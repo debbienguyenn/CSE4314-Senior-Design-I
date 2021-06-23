@@ -3,7 +3,7 @@ session_start();
 
 
 
-if(isset($_POST['update'])){
+if(isset($_POST['Update'])){
 
     include('db.php');
     mysqli_select_db($conn, 'registration');
@@ -39,8 +39,8 @@ if(isset($_POST['update'])){
 
                         $results = mysqli_query($conn,$sql);
 
-                        header('Location:profile.php');
-                    exit;
+                        echo '<script>window.location=\'profile.php\'</script>';                    
+                        exit;
                     }
 
 

@@ -60,7 +60,10 @@
                         <iframe width="400" height="240" src="https://www.youtube.com/embed/2acZIOSV9LY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                        </div>
                     </div>
                     <div>
-                        <button type="submit" class="btn btn-success" style="width: 80px" ;>Save</button>
+                        <!-- <button type="submit" class="btn btn-success" style="width: 80px" ;>Save</button> -->
+                        <input class="btn btn-success"
+                        type="submit"
+                        name="id" value="003">
                     </div>
                 </div>
             </div>
@@ -73,7 +76,10 @@
                         <iframe width="400" height="240" src="https://www.youtube.com/embed/XJ2hd2cKAJo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                        </div>
                     </div>
                     <div>
-                        <button type="submit" class="btn btn-success" style="width: 80px" ;>Save</button>
+                        <!-- <button type="submit" class="btn btn-success" style="width: 80px" ;>Save</button> -->
+                        <input class="btn btn-success"
+                        type="submit"
+                        name="id" value="004">
                     </div>
                 </div>
                 <div class="col-sm" align="center">
@@ -82,7 +88,10 @@
                         <iframe width="400" height="240" src="https://www.youtube.com/embed/CmomQkOau7c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                        </div>
                     </div>
                     <div>
-                        <button type="submit" class="btn btn-success" style="width: 80px" ;>Save</button>
+                        <!-- <button type="submit" class="btn btn-success" style="width: 80px" ;>Save</button> -->
+                        <input class="btn btn-success"
+                        type="submit"
+                        name="id" value="005">
                     </div>
                 </div>
                 <div class="col-sm" align="center">
@@ -91,7 +100,10 @@
                         <iframe width="400" height="240" src="https://www.youtube.com/embed/HeGVeBWECu8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                        </div>
                     </div>
                     <div>
-                        <button type="submit" class="btn btn-success" style="width: 80px" ;>Save</button>
+                        <!-- <button type="submit" class="btn btn-success" style="width: 80px" ;>Save</button> -->
+                        <input class="btn btn-success"
+                        type="submit"
+                        name="id" value="006">
                     </div>
                 </div>
 
