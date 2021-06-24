@@ -119,7 +119,73 @@
                 <!--third column-->
                 <div class="col-3">
                     <h3 style="color:3F454C; text-align: center;">Buddies</h3>
+
+
+
+                <form class="form-container" action="search_action.php" method="post">
+                    <div class="container">
+                        <div class="row justify-content-left">
+                            <input style="width:300px" class="form-control me-2" type="text" placeholder="Add buddies.."
+                                    name="buddy" id="buddy">
+                            <button style="width:300px" class="btn btn-outline-success" type="submit" id="addBuddiesbtn" name="addBuddiesbtn">Add Buddy</button>
+                        <div id="buddiesList"></div>
+                        </div>
+                    </div>
+                </form>
+
+
+
+
                     <button style="width:300px" class="btn btn-outline-success" type="submit" id="button_clicked"href="Buddies.php">Find Buddies</button>
+
+                    <?php
+                    include('db.php');
+
+                    //get current friends of the user to create buddies list
+                    mysqli_select_db($conn, 'buddies');
+                    $username = $_SESSION['username'];
+                    $buddies_query = "SELECT BuddyID from buddies where UserID = '$username'";
+                    $buddies_result = mysqli_query($conn, $buddies_query);
+                    $buddies_list = array();
+
+                    if(mysqli_num_rows($buddies_result)>0)
+                    {
+                        while($list = mysqli_fetch_assoc($buddies_result))
+                        {
+                            $buddies_list[] = $list;
+                        }
+                    }
+
+                    //get current buddies' userImage to put into an array
+                    /*
+                    $buddyimg_list = array();
+                    foreach($buddies_list as $buddiesData)
+                    {
+                        mysqli_select_db($conn, 'registration');
+                        $buddiesData = $buddiesData['userImage'];
+                        $buddydata_query = "SELECT userImage from registration where username = '$buddiesData'";
+                        $buddyimg_result = mysqli_query($conn, $buddydata_query);
+                        if(mysqli_num_rows($buddyimg_result)>0)
+                        {
+                            $buddyimg = mysqli_fetch_assoc($buddyimg_result);
+                            $buddyimg_list[] = $buddyimg;
+                        }
+                    }
+                    */
+
+                    //displaying current buddies and their profile pic in a list on profile page.
+                    foreach($buddies_list as $buddyname)
+                    {
+                        $buddies = $buddyname['BuddyID'];
+                        print_r($buddies);
+                        print_r("    ");
+                        //add buttons to remove friend and chat here.. 
+                        $html = '<button style="width:150px" class="btn btn-outline-danger" type="submit" id="deleteBuddiesbtn" name="deleteBuddiesbtn">Unbuddy</button>';
+                        echo $html;
+
+                        echo "<br>";
+                    }
+                    ?>
                 </div>
             </div>
         </div>

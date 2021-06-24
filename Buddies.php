@@ -52,7 +52,7 @@
               <div class="row justify-content-center">
                 <input style="width:600px" class="form-control me-2" type="text" placeholder="Search for buddies.."
                           name="delete" id="delete">
-                <button style="width:300px" class="btn btn-outline-success" type="submit" id="deleteBuddiesbtn" name="deleteBuddiesbtn">Remove Buddy</button>
+                <button style="width:300px" class="btn btn-outline-danger" type="submit" id="deleteBuddiesbtn" name="deleteBuddiesbtn">Remove Buddy</button>
             </div>
         </div>
       </form>

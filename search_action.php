@@ -1,9 +1,11 @@
 
  <?php  
 
+ session_start();
  //database connection
  include('db.php');
  mysqli_select_db($conn, 'buddies');
+ //mysqli_select_db($conn, 'registration');
  
  /****************************Autocompletion when searching for buddies**************************/
  if(isset($_POST["query"]))  
@@ -47,7 +49,7 @@ $num = mysqli_num_rows($result);
 if($num==1)
 {
      echo '<script>alert("Buddy previously added!")</script>';
-     echo '<script>window.location=\'Buddies.php\'</script>';
+     echo '<script>window.location=\'profile.php\'</script>';
 }
 else
 {
@@ -55,7 +57,7 @@ else
      if(mysqli_query($conn, $add))
      {
           echo '<script>alert("Buddy Added!")</script>';
-          echo '<script>window.location=\'Buddies.php\'</script>';
+          echo '<script>window.location=\'profile.php\'</script>';
      }
      else
      {
