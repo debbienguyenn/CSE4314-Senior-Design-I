@@ -1,6 +1,7 @@
 
  <?php  
 
+session_start();
  //database connection
  include('db.php');
  mysqli_select_db($conn, 'buddies');
