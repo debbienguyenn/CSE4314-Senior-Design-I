@@ -1,11 +1,9 @@
 
  <?php  
 
-<<<<<<< HEAD
+
 session_start();
-=======
- session_start();
->>>>>>> b7f6f7b39a653353a4a128aae851566907c56e14
+
  //database connection
  include('db.php');
  mysqli_select_db($conn, 'buddies');
