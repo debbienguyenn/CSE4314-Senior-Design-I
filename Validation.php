@@ -23,7 +23,7 @@ if($num==1)
     $_SESSION['userImage'] = isset($row['userImage']) ? $row['userImage'] : null;
     $_SESSION['bio'] = $row['bio'];
 
-    echo '<script>alert("Login Sucessfully")</script>';
+    //echo '<script>alert("Login Sucessfully")</script>';
     echo '<script>window.location=\'profile.php\'</script>';
 }
 else

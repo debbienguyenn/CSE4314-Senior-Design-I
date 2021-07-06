@@ -3,7 +3,7 @@ session_start();
 
 
 
-if(isset($_POST['Update'])){
+if(isset($_POST['update'])){
 
     include('db.php');
     mysqli_select_db($conn, 'registration');
@@ -38,7 +38,9 @@ if(isset($_POST['Update'])){
                         $sql = "UPDATE registration SET bio='$bio',userImage='$imageName' WHERE username = '$loggedInUser'";
 
                         $results = mysqli_query($conn,$sql);
-
+                        //echo '<script>alert("Profile Details Successfully Updated!")<\Script>';
+                        $_SESSION['userImage'] = $imageName;
+                        $_SESSION['bio'] = $bio;
                         echo '<script>window.location=\'profile.php\'</script>';                    
                         exit;
                     }

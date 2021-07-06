@@ -1,11 +1,13 @@
 
  <?php  
 
- session_start();
+
+session_start();
+
  //database connection
  include('db.php');
  mysqli_select_db($conn, 'buddies');
- //mysqli_select_db($conn, 'registration');
+ mysqli_select_db($conn, 'registration');
  
  /****************************Autocompletion when searching for buddies**************************/
  if(isset($_POST["query"]))  
@@ -41,31 +43,45 @@
 $buddy = filter_input(INPUT_POST, 'buddy');
 $username = $_SESSION['username'];
 
-//check if buddy is already added to user
-$s = "SELECT * from buddies where userID = '$username' AND buddyID = '$buddy'";
-$result = mysqli_query($conn, $s);
-$num = mysqli_num_rows($result);
 
+//check if buddy exists in the registration database
+$check = "SELECT * from registration where username = '$buddy'";
+$result = mysqli_query($conn, $check);
+$num = mysqli_num_rows($result);
 if($num==1)
 {
-     echo '<script>alert("Buddy previously added!")</script>';
-     echo '<script>window.location=\'profile.php\'</script>';
-}
-else
-{
-     $add = "INSERT INTO buddies(userID, buddyID) VALUES('$username','$buddy')";
-     if(mysqli_query($conn, $add))
+     //check if buddy is already added to user
+     $s = "SELECT * from buddies where userID = '$username' AND buddyID = '$buddy'";
+     $result = mysqli_query($conn, $s);
+     $num = mysqli_num_rows($result);
+     $check = "SELECT * from registration where username = '$buddy'";
+     if($num==1)
      {
-          echo '<script>alert("Buddy Added!")</script>';
+          echo '<script>alert("Buddy previously added!")</script>';
           echo '<script>window.location=\'profile.php\'</script>';
      }
      else
      {
-          echo "failed";
+          $add = "INSERT INTO buddies(userID, buddyID) VALUES('$username','$buddy')";
+          if(mysqli_query($conn, $add))
+          {
+               echo '<script>alert("Buddy Added!")</script>';
+               echo '<script>window.location=\'profile.php\'</script>';
+          }
+          else
+          {
+               echo "failed";
+          }
      }
 }
-mysqli_close($conn);
-?>
+else
+{
+     echo '<script>alert("Buddy cannot be found. Please try again.")</script>';
+     echo '<script>window.location=\'profile.php\'</script>';
+}
+     mysqli_close($conn);
+     ?>
+
 
  <!--
  if(isset($_POST["query_result"]))

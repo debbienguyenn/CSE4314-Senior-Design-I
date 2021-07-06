@@ -15,7 +15,8 @@ $saved = "INSERT INTO likedVideos(Username,videoID) VALUES('$username','$id')";
     }
     else
     {
-        echo"Video is already saved!";
+        echo'<script>alert("Video is already saved!")</script>';
+        header('location:profile.php');
     }
 mysqli_close($conn);
 

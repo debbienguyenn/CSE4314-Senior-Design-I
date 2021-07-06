@@ -43,19 +43,18 @@
                     <!--Update form-->
                     <form action="profileUpdate.php"
                             method="POST"
-                            enctype="multipart/form-data"
-                    >
-                    <div class="form-group">
-                        <label style="color:grey" for="userImage"><b>Profile Picture</b></label>
-                        <input type="file" name="userImage" class="form-control">
-                    </div>
-                    <div class="form-group">
-                        <label style="color:grey" for="bio"><b>Update Bio</b></label>
-                        <input type="text" name="bio" class="form-control" >
-                    </div>
-                    <div class="form-group">
-                        <input type="submit" name="update"  class="btn btn-info" value="Update">
-                    </div>
+                            enctype="multipart/form-data">
+                        <div class="form-group">
+                            <label style="color:grey" for="userImage"><b>Profile Picture</b></label>
+                            <input type="file" name="userImage" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label style="color:grey" for="bio"><b>Update Bio</b></label>
+                            <input type="text" name="bio" class="form-control" >
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" name="update"  class="btn btn-info" value="Update">
+                        </div>
 
                     </form>
                 </div>
