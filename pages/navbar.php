@@ -1,13 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <title>Document</title>
+</head>
+<body>
+  
+
 <div class="container">
       <div class="navbar">
+<<<<<<< HEAD:pages/navbar.php
         <a href="Homepage.php">
           <image src="../images/logo.jpg" class="logo"></image>
+=======
+        <a href="homepage.php">
+          <image src="images/logo.jpg" class="logo"></image>
+>>>>>>> 650dc666ecfb41f4dbad315803273635051778f8:navbar.php
         </a>
         <nav style="width:1000px" class="navbar navbar-expand-lg navbar-light bg-light">
           <div class="container-fluid">
-            <a class="navbar-brand" href="Homepage.php">Home</a>
+            <a class="navbar-brand" href="homepage.php">Home</a>
 
-            <!--dropdown menu for video categories-->
+           <!-- dropdown menu for video categories -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
               data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
               aria-label="Toggle navigation">
@@ -31,17 +47,22 @@
                   </ul>
                 </li>
                 <!--search bar-->
-                <li>
-                  <form class="d-flex">
+             
+              </ul>
+
+            </div>
+            <nav class="navbar navbar-light bg-light">
+  <form method ="POST" action="searchedvideos.php" >
+    <!-- <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"> -->
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+  </form>
+</nav>
+           <!-- <form id="form" class="d-flex">
                     <input style="width:400px" class="form-control me-2" type="search" placeholder="Search for videos.."
                       aria-label="Search">
                     <button style="width:100px" class="btn btn-outline-success" type="submit">Search</button>
-                  </form>
+                  </form>-->
                   
-                  
-                </li>
-              </ul>
-            </div>
           </div>
           <!--Replace Login and Sign Up links when logged in-->
           <?php
@@ -55,8 +76,8 @@
             }
             else
             {
-              echo '<div class="col-3">
-              <a href="profile.php">Profile</a>
+              echo '<div class="col-2">
+              <a href="profile.php">Me</a>
               &emsp;
               <a href="Meet.php">Meet</a>
               &emsp;
@@ -69,4 +90,10 @@
         </nav>
       </div>
     </div>
-</div>
+    </body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="script.js"></script>  
+</html>
+  
+    
+          
