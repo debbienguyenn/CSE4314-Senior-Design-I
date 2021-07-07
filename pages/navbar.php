@@ -1,7 +1,7 @@
 <div class="container">
       <div class="navbar">
         <a href="Homepage.php">
-          <image src="images/logo.jpg" class="logo"></image>
+          <image src="../images/logo.jpg" class="logo"></image>
         </a>
         <nav style="width:1000px" class="navbar navbar-expand-lg navbar-light bg-light">
           <div class="container-fluid">
@@ -60,7 +60,7 @@
               &emsp;
               <a href="Meet.php">Meet</a>
               &emsp;
-              <a href="Logout.php">Log out</a>
+              <a href="../processing/Logout.php">Log out</a>
               </div>';
             }
           ?>

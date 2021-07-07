@@ -2,7 +2,7 @@
 
  session_start();
  //database connection
- include('db.php');
+ include('processing/db.php');
  mysqli_select_db($conn, 'buddies');
  
  
@@ -19,7 +19,7 @@ $num = mysqli_num_rows($result);
 if($num==0)
 {
      echo '<script>alert("Buddy Not Found.")</script>';
-     echo '<script>window.location=\'Buddies.php\'</script>';
+     echo '<script>window.location=\'processing/Buddies.php\'</script>';
 }
 else
 {
@@ -27,7 +27,7 @@ else
      if(mysqli_query($conn, $delete))
      {
           echo '<script>alert("Buddy has been removed from your buddies list.")</script>';
-          echo '<script>window.location=\'Buddies.php\'</script>';
+          echo '<script>window.location=\'processing/Buddies.php\'</script>';
      }
      else
      {

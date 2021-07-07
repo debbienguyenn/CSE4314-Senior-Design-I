@@ -2,7 +2,7 @@
     session_start();
     if(!isset($_SESSION['username']))
     {
-        header('location: registration.php');
+        header('location: pages/Login.php');
     }
 ?>
 
@@ -11,7 +11,7 @@
 
 <head>
     <title> My Profile - WatchBuddy </title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css-bootstrap/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <link rel="stylesheet" href="style.css" type=text/css>
      
@@ -33,7 +33,7 @@
                 <!--first column-->
                 <div class="col-3" style="border-right: 1px solid lightgrey; height:500px">
                     <!--Display-->
-                    <img style="border-radius: 50%" src="images/users/<?php echo $_SESSION['userImage']; ?>" alt="" 
+                    <img style="border-radius: 50%" src="../images/users/<?php echo $_SESSION['userImage']; ?>" alt="" 
                     width="120px" height="120px">
                     <b style="text-align:center; margin-left: 25px;">
                     <?php echo $_SESSION['username']; ?>
@@ -41,7 +41,7 @@
                     <p style="text-align:center"><?php echo $_SESSION['bio']; ?></p>
 
                     <!--Update form-->
-                    <form action="profileUpdate.php"
+                    <form action="../processing/profileUpdate.php"
                             method="POST"
                             enctype="multipart/form-data">
                         <div class="form-group">
@@ -63,7 +63,7 @@
                 <div class="col-6" style="border-right: 1px solid lightgrey; height:500px;">
                     <h1 style="color:3F454C; text-align: center;">Watch List</h1>
                         <?php
-                        include('db.php');
+                        include('../processing/db.php');
                         //get saved video ID list
                         mysqli_select_db($conn, 'likedVideos');
                         $username = $_SESSION['username'];
@@ -121,7 +121,7 @@
 
 
 
-                <form class="form-container" action="search_action.php" method="post">
+                <form class="form-container" action="../processing/search_action.php" method="post">
                     <div class="container">
                         <div class="row justify-content-left">
                             <input style="width:300px" class="form-control me-2" type="text" placeholder="Add buddies.."
@@ -138,7 +138,7 @@
                     <button style="width:300px" class="btn btn-outline-success" type="submit" id="button_clicked"href="Buddies.php">Find Buddies</button>
 
                     <?php
-                    include('db.php');
+                    
 
                     //get current friends of the user to create buddies list
                     mysqli_select_db($conn, 'buddies');
@@ -196,6 +196,6 @@
     ?>
 
 <script>
-$('#button_clicked').on('click', function() { window.location = 'Buddies.php'; });
+$('#button_clicked').on('click', function() { window.location = 'processing/Buddies.php'; });
 </script>
         

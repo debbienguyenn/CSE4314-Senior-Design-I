@@ -13,11 +13,11 @@ if(isset($_SESSION['query']))
  //if nothing is set in the search buddies bar, it will redirect user to the homepage for now. 06/19/2021
  if(!isset($query))
  {
-     header('location:homepage.php');
+     header('location:pages/homepage.php');
  }
  else //otherwise, display query on page.
  {
-     include('navbar.php');
+     include('pages/navbar.php');
 ?>
 
      <div class="row">
@@ -43,7 +43,7 @@ if(isset($_SESSION['query']))
 			function load_data(query_result, page)
 			{
 				$.ajax({
-					url:"search_action.php",
+					url:"prosessing/search_action.php",
 					method:"POST",
 					data:{query_result:query_result, page:page},
 					success:function(data)
@@ -92,7 +92,7 @@ if(isset($_SESSION['query']))
 		</script>
 <?php
 
-	include('footer.php');
+	include('pages/footer.php');
 }
 
 ?>

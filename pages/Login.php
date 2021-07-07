@@ -8,7 +8,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="../css-bootstrap/bootstrap.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
   <link rel="stylesheet" href="style.css" type=text/css>
   <title>Login - WatchBuddy</title>
@@ -20,7 +20,7 @@
       include('navbar.php');
     ?>
 
-    <form class="form-container" action="Validation.php" method="post">
+    <form class="form-container" action="../processing/Validation.php" method="post">
       <div class="container-xxl bg">
         <h1 style="color:grey"> WatchBuddy Login</h1>
         <div class="mb-3">

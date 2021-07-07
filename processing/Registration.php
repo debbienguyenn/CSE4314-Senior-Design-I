@@ -22,7 +22,7 @@ $num = mysqli_num_rows($result);
 if($num==1)
 {
     echo '<script>alert("Email or Username exists")</script>';
-    echo '<script>window.location=\'SignUp.php\'</script>';
+    echo '<script>window.location=\'../pages/SignUp.php\'</script>';
 }
 else
 {
@@ -30,7 +30,7 @@ else
     if( mysqli_query($conn, $reg))
     {
         echo '<script>alert("Registration successully!")</script>';
-        echo '<script>window.location=\'Login.php\'</script>';
+        echo '<script>window.location=\'../pages/Login.php\'</script>';
     }
     else
     {

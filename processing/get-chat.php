@@ -1,7 +1,7 @@
 <?php
    session_start();
    if(!isset($_SESSION['username'])){
-       include_once "db.php";
+       include_once "processing/db.php";
        $outgoing_id = mysqli_real_escape_string($conn, $_POST['outgoing_id']);
        $incoming_id = mysqli_real_escape_string($conn, $_POST['incoming_id']);
        $output = "";
@@ -30,6 +30,6 @@
         }
     }
     else{
-        header("../homepage.php");
+        header("pages/homepage.php");
     }
 ?>

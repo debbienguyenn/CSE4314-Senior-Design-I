@@ -28,7 +28,7 @@ if(isset($_POST['update'])){
                 if($fileSize < 5000000){
                     //var_dump(basename($imageName));
 
-                    $fileNewName = "images/users/".$imageName;
+                    $fileNewName = "../images/users/".$imageName;
                     
                     $uploaded = move_uploaded_file($fileTmpName,$fileNewName);
                     
@@ -41,20 +41,20 @@ if(isset($_POST['update'])){
                         //echo '<script>alert("Profile Details Successfully Updated!")<\Script>';
                         $_SESSION['userImage'] = $imageName;
                         $_SESSION['bio'] = $bio;
-                        echo '<script>window.location=\'profile.php\'</script>';                    
+                        echo '<script>window.location=\'../pages/profile.php\'</script>';                    
                         exit;
                     }
 
 
                 }else{
                     echo '<script>alert("Invalid File Size!")</script>';
-                    echo '<script>window.location=\'profile.php\'</script>';
+                    echo '<script>window.location=\'../pages/profile.php\'</script>';
                     exit;
                 }
                 exit;
             }else{
                 echo '<script>alert("Invalid File Type!")</script>';
-                echo '<script>window.location=\'profile.php\'</script>';
+                echo '<script>window.location=\'../pages/profile.php\'</script>';
                 exit;
             }
             
@@ -62,7 +62,7 @@ if(isset($_POST['update'])){
 
         }else{
             echo '<script>alert("Empty Bio!")</script>';
-            echo '<script>window.location=\'profile.php\'</script>';
+            echo '<script>window.location=\'../pages/profile.php\'</script>';
             exit;
         }
         

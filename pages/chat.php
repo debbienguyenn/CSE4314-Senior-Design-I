@@ -2,7 +2,7 @@
    session_start();
    if(!isset($_SESSION['username']))
    {
-       header('location: registration.php');
+       header('location: Login.php');
    }
 ?>
 
@@ -19,11 +19,11 @@
     <div class="container">
         <div class="msg-header">
             <div class="profile-pic">
-                <img src="images/<?php echo $_SESSION['userImage']; ?>" alt="">
+                <img src="../images/<?php echo $_SESSION['userImage']; ?>" alt="">
             </div>
         <div class="active">
             <?php
-                include("db.php");
+                include("../processing/db.php");
                 $username = $_SESSION['username'];
                 $sql = mysqli_query($conn, "SELECT * FROM registration INNER JOIN buddies ON buddies.BuddyId = registration.username");
                 if(mysqli_num_rows($sql)>0){
@@ -69,7 +69,7 @@
         </div>
     </div>
 
-    <script src="js/chat.js"></script>
+    <script src="../processing/chat.js"></script>
 
 </body>
 </html>

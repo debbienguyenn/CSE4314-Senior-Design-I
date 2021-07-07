@@ -1,51 +1,53 @@
 /**********************General***********************/
-h1{
-    color: grey;
+h1 {
+  color: grey;
 }
-p{
-    color:grey;
+p {
+  color: grey;
 }
-h2{
-    color: grey;
+h2 {
+  color: grey;
 }
-h3{
-    color: grey;
+h3 {
+  color: grey;
 }
-h4{
-    color: grey;
+h4 {
+  color: grey;
 }
-h5{
-    color: white;
+h5 {
+  color: white;
 }
-h6{
-    color: grey;
+h6 {
+  color: grey;
 }
 
-a{
+a {
   color: black;
   text-decoration: none;
 }
 
-header{
+header {
   height: 100px;
-  background-color:#6892B3;
+  background-color: #6892b3;
 }
-section{
+section {
   height: 100%;
   background-color: white;
-  background-repeat:no-repeat;
+  background-repeat: no-repeat;
   background-size: auto;
+  float: center;
 }
-footer{
+footer {
   /*background-color:#17202A;*/
-  background-color:rgb(241, 242, 243);
-  position:relative;
-   bottom:0;
-   width:100%;
-   height:auto;
-   padding: 10px 10px 0px 10px;
+  background-color: rgb(241, 242, 243);
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  padding: 10px 10px 0px 10px;
+  color: grey;
 }
-.logo{
+.logo {
   width: 200px;
   cursor: pointer;
   animation: movedown 1s linear 1;
@@ -54,22 +56,22 @@ footer{
   animation-fill-mode: forwards;
 }
 
-@keyframes movedown{
-  0%{
-      transform: translate(-100px);
-      visibility: visible;
+@keyframes movedown {
+  0% {
+    transform: translate(-100px);
+    visibility: visible;
   }
-  100%{
-      transform: translate(0);
-      visibility: visible;
-    }
+  100% {
+    transform: translate(0);
+    visibility: visible;
+  }
 }
 
-nav{
+nav {
   flex: 1;
   padding-left: 60px;
 }
-nav ul li{
+nav ul li {
   display: inline-block;
   list-style: none;
   margin: 0px 20px;
@@ -80,11 +82,13 @@ nav ul li{
 .form-container {
   padding: 50px 60px;
 }
-
+/*
 .container {
   height: auto;
   position: relative;
-}
+  display: inline-block;
+  align-items: center;
+}*/
 
 .vertical-center {
   margin: 0;
@@ -98,7 +102,8 @@ nav ul li{
 * {box-sizing: border-box}
 
 /* Full-width input fields */
-  input[type=text], input[type=password] {
+input[type="text"],
+input[type="password"] {
   width: 100%;
   padding: 15px;
   margin: 5px 0 22px 0;
@@ -107,7 +112,8 @@ nav ul li{
   background: #f1f1f1;
 }
 
-input[type=text]:focus, input[type=password]:focus {
+input[type="text"]:focus,
+input[type="password"]:focus {
   background-color: #ddd;
   outline: none;
 }
@@ -119,7 +125,7 @@ hr {
 
 /* Set a style for all buttons */
 button {
-  background-color: #4CAF50;
+  background-color: #4caf50;
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
@@ -130,7 +136,7 @@ button {
 }
 
 button:hover {
-  opacity:1;
+  opacity: 1;
 }
 
 /* Extra styles for the cancel button */
@@ -140,7 +146,8 @@ button:hover {
 }
 
 /* Float cancel and signup buttons and add an equal width */
-.cancelbtn, .signupbtn {
+.cancelbtn,
+.signupbtn {
   float: left;
   width: 50%;
 }
@@ -159,7 +166,8 @@ button:hover {
 
 /* Change styles for cancel button and signup button on extra small screens */
 @media screen and (max-width: 300px) {
-  .cancelbtn, .signupbtn {
+  .cancelbtn,
+  .signupbtn {
     width: 100%;
   }
 }
@@ -167,24 +175,23 @@ button:hover {
 /* End of Sign up */
 
 label {
-	cursor: pointer;
-	color: #f1f1f1;
-	display: block;
-	padding: 10px;
-	margin: 3px;
+  cursor: pointer;
+  color: #f1f1f1;
+  display: block;
+  padding: 10px;
+  margin: 3px;
 }
-
 
 /*video*/
-.iframe-container{
+.iframe-container {
   position: relative;
   width: 100%;
-  padding-bottom: 56.25%; 
+  padding-bottom: 56.25%;
   height: 0;
 }
-.iframe-container iframe{
+.iframe-container iframe {
   position: absolute;
-  top:0;
+  top: 0;
   left: 0;
   width: 100%;
   height: 100%;
@@ -203,135 +210,134 @@ label {
   padding-right: 8px;
 }*/
 
-.container{
-  max-width: 500 !important;
+.container {
+  /* max-width: 500 !important; */
   margin-top: 4%;
-  margin-left: 70px;
-  margin-right: 70px;
-  font-family: sans-serif;
+  margin-left: auto;
+  margin-right: auto;
   letter-spacing: 0.5px;
 }
-img{
+img {
   max-width: 100%;
 }
-.msg-header{
+.msg-header {
   border: 1px solid #ccc;
   width: 100%;
   height: 10%;
   border-bottom: none;
   display: inline-block;
-  background-color:hsl(348, 45%, 98%)
+  background-color: hsl(348, 45%, 98%);
 }
-.profile-pic{
+.profile-pic {
   border-radius: 50%;
   width: 40px;
   margin-left: 0%;
   margin-top: 12px;
   float: left;
 }
-.active{
+.active {
   width: 120px;
   float: left;
   margin-top: 10px;
 }
-.p{
-  font-weight:900;
+.p {
+  font-weight: 900;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size:smaller;
+  font-size: smaller;
   text-align: center;
   color: rgb(255, 255, 255);
 }
-.msg-inbox{
+.msg-inbox {
   border: 1px solid #ccc;
   overflow: hidden;
   padding-bottom: 30px;
-  }
-  .chats{
-    padding: 30px 15px 0 25px;
-  }
-  .msg-page{
-    height: 516px;
-    overflow-y: auto;
-  }
-  .received-chats-img{
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-  }
-  .received-chats{
-    display: inline-block;
-    padding: 0 0 0 10px;
-    vertical-align: top;
-    width: 92%;
-  }
-  .received-msg-inbox{
-    margin-left: 10px;
-    margin-right: auto;
-    max-width: calc(100%-130px);
-  }
-  .received-msg-inbox p{
-  background:rgba(255, 255, 255, 0.849);
+}
+.chats {
+  padding: 30px 15px 0 25px;
+}
+.msg-page {
+  height: 516px;
+  overflow-y: auto;
+}
+.received-chats-img {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+}
+.received-chats {
+  display: inline-block;
+  padding: 0 0 0 10px;
+  vertical-align: top;
+  width: 92%;
+}
+.received-msg-inbox {
+  margin-left: 10px;
+  margin-right: auto;
+  max-width: calc(100%-130px);
+}
+.received-msg-inbox p {
+  background: rgba(255, 255, 255, 0.849);
   border-radius: 10px;
   color: #333;
   font-size: 14px;
   margin: 0;
   padding: 5px 10px 5px 12px;
   width: 100%;
-  }
-  .outgoing-chats{
-    overflow: hidden;
-    margin: 26px 20px;
-  }
-  .outgoing-chats-msg p{
-    background: #007bff none repeat scroll 0 0;
-    color: #fff;
-    border-radius: 10px;
-    font-size: 14px;
-    margin: 0;
-    color: #fff;
-    padding: 5px 10px 5px 12px;
-    width: 100%;
-  }
-  .outgoing-chats-msg{
-    float: left;
-    width: 46%;
-    margin-left: 45%;
-  }
-  .outgoing-chats-img{
-    display: inline-block;
-    width: 20px;
-    float: none;
-  }
-  .chat-page .typing-area{
-    padding: 18px 30px;
-    display: flex;
-    justify-content: space-between; 
-  }
-  .typing-area input{
-    height: 45px;
-    width: calc(100%-80px);
-    font-size: 17px;
-    border: 1px solid #ccc;
-    padding: 0 13px;
-    border-radius: 5px 0 0 5px;
-    outline: none;
-  }
-  .typing-area button{
-    width: 80px;
-    height: 50px;
-    border: none;
-    background: #008CBA;
-    color: #fff;
-    font-size: 17px;
-    cursor: pointer;
-    border-radius: 0 5px 5px 0;
-  }
-  .button i{
-    float: right;
-    margin-bottom: 5%;
-    width: 40%;
-  }
-  /*.input-group{
+}
+.outgoing-chats {
+  overflow: hidden;
+  margin: 26px 20px;
+}
+.outgoing-chats-msg p {
+  background: #007bff none repeat scroll 0 0;
+  color: #fff;
+  border-radius: 10px;
+  font-size: 14px;
+  margin: 0;
+  color: #fff;
+  padding: 5px 10px 5px 12px;
+  width: 100%;
+}
+.outgoing-chats-msg {
+  float: left;
+  width: 46%;
+  margin-left: 45%;
+}
+.outgoing-chats-img {
+  display: inline-block;
+  width: 20px;
+  float: none;
+}
+.chat-page .typing-area {
+  padding: 18px 30px;
+  display: flex;
+  justify-content: space-between;
+}
+.typing-area input {
+  height: 45px;
+  width: calc(100%-80px);
+  font-size: 17px;
+  border: 1px solid #ccc;
+  padding: 0 13px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+}
+.typing-area button {
+  width: 80px;
+  height: 50px;
+  border: none;
+  background: #008cba;
+  color: #fff;
+  font-size: 17px;
+  cursor: pointer;
+  border-radius: 0 5px 5px 0;
+}
+.button i {
+  float: right;
+  margin-bottom: 5%;
+  width: 40%;
+}
+/*.input-group{
     float: right;
     margin-top: 13px;
     margin-right: 20px;

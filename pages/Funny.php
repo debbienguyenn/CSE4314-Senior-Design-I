@@ -10,9 +10,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css" type=text/css>
+    <!-- <meta http-equiv="X-UA-Compatible" content="ie=edge"> -->
+    <link rel="stylesheet" href="../css-bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css" type=text/css>
     <title>Available Videos</title>
     <style>
          footer
@@ -27,7 +27,7 @@
       include('navbar.php');
     ?>
 
-    <form class="form-container" action="SaveVideo.php" method="post">
+    <form class="form-container" action="../processing/SaveVideo.php" method="post">
         <div class="container">
             <h1> Funny Videos</h1>
             <div class="row justify-content-center">

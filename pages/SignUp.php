@@ -8,7 +8,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="../css-bootstrap/bootstrap.css">
   <link rel="stylesheet" href="style.css" type=text/css>
   <title>Sign up - WatchBuddy</title>
 
@@ -26,7 +26,7 @@
       </div>
     </div>
 
-    <form class="form-container" action="Registration.php" method="post">
+    <form class="form-container" action="../processing/Registration.php" method="post">
       <div class="container-xxl bg">
         <div class="row">
           <h1 style="color:grey">Sign Up</h1>

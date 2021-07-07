@@ -24,12 +24,12 @@ if($num==1)
     $_SESSION['bio'] = $row['bio'];
 
     //echo '<script>alert("Login Sucessfully")</script>';
-    echo '<script>window.location=\'profile.php\'</script>';
+    echo '<script>window.location=\'../pages/profile.php\'</script>';
 }
 else
 {
     echo '<script>alert("Incorrect Email or Password")</script>';
-    echo '<script>window.location=\'Login.php\'</script>';
+    echo '<script>window.location=\'../pages/Login.php\'</script>';
     }
 mysqli_close($conn);
 ?>

@@ -58,7 +58,7 @@ if($num==1)
      if($num==1)
      {
           echo '<script>alert("Buddy previously added!")</script>';
-          echo '<script>window.location=\'profile.php\'</script>';
+          echo '<script>window.location=\'../pages/profile.php\'</script>';
      }
      else
      {
@@ -66,7 +66,7 @@ if($num==1)
           if(mysqli_query($conn, $add))
           {
                echo '<script>alert("Buddy Added!")</script>';
-               echo '<script>window.location=\'profile.php\'</script>';
+               echo '<script>window.location=\'../pages/profile.php\'</script>';
           }
           else
           {
@@ -77,7 +77,7 @@ if($num==1)
 else
 {
      echo '<script>alert("Buddy cannot be found. Please try again.")</script>';
-     echo '<script>window.location=\'profile.php\'</script>';
+     echo '<script>window.location=\'../pages/profile.php\'</script>';
 }
      mysqli_close($conn);
      ?>

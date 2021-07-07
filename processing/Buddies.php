@@ -5,7 +5,7 @@
   {
     $search_query = preg_replace("#[^a-z 0-9?!]#i", "", $_POST["buddy"]);
 
-    header('location:searchBuddies.php?query='.urlencode($search_query).'');
+    header('location:processing/searchBuddies.php?query='.urlencode($search_query).'');
   }
 
 
@@ -16,9 +16,9 @@
 
 <head>
   <title> WatchBuddy - Buddies Page</title>
-  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css-bootstrap/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-  <link rel="stylesheet" href="style.css" type=text/css>
+  <link rel="stylesheet" href="pages/style.css" type=text/css>
   <style>
     footer {
       color: grey
@@ -29,9 +29,9 @@
 <body>
     <section>
         <?php
-            include('navbar.php');
+            include('pages/navbar.php');
         ?>
-      <form class="form-container" action="search_action.php" method="post">
+      <form class="form-container" action="processing/search_action.php" method="post">
         <div class="container">
             <div class="row justify-content-center">
               <h2 align="center">Add Buddies!</h2>
