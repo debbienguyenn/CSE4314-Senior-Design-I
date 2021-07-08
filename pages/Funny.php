@@ -17,7 +17,7 @@
     <style>
          footer
          {
-             position: fixed;
+             position: fixed !important;
          }
      </style>
 </head>
