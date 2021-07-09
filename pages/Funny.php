@@ -37,12 +37,9 @@
                         <iframe width="400" height="240" src="https://www.youtube.com/embed/DODLEX4zzLQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                        </div>
                     </div>
                     <div>
-                        <!--
-                        <button id="123" type="submit" class="btn btn-success" style="width: 80px" ;>Save</button>
-                   -->
                         <input class="btn btn-success"
                         type="submit"
-                        name="id" value="001">
+                        name="id" value="001"><i class = "fa fa-save"></i></input>
                     </div>
                 </div>
                 <div class="col-sm" align="center">
@@ -51,9 +48,6 @@
                         <iframe width="400" height="240" src="https://www.youtube.com/embed/FFLTU9eIijw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                        </div>
                     </div>
                     <div>
-                    <!--
-                        <button type="submit" class="btn btn-success" style="width: 80px" ;>Save</button>
-                   -->
                         <input class="btn btn-success"
                         type="submit"
                         name="id" value="002">
@@ -66,7 +60,6 @@
                         <iframe width="400" height="240" src="https://www.youtube.com/embed/2acZIOSV9LY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                        </div>
                     </div>
                     <div>
-                        <!-- <button type="submit" class="btn btn-success" style="width: 80px" ;>Save</button> -->
                         <input class="btn btn-success"
                         type="submit"
                         name="id" value="003">
@@ -82,7 +75,6 @@
                         <iframe width="400" height="240" src="https://www.youtube.com/embed/XJ2hd2cKAJo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                        </div>
                     </div>
                     <div>
-                        <!-- <button type="submit" class="btn btn-success" style="width: 80px" ;>Save</button> -->
                         <input class="btn btn-success"
                         type="submit"
                         name="id" value="004">
@@ -94,7 +86,6 @@
                         <iframe width="400" height="240" src="https://www.youtube.com/embed/CmomQkOau7c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                        </div>
                     </div>
                     <div>
-                        <!-- <button type="submit" class="btn btn-success" style="width: 80px" ;>Save</button> -->
                         <input class="btn btn-success"
                         type="submit"
                         name="id" value="005">
@@ -106,7 +97,6 @@
                         <iframe width="400" height="240" src="https://www.youtube.com/embed/HeGVeBWECu8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                        </div>
                     </div>
                     <div>
-                        <!-- <button type="submit" class="btn btn-success" style="width: 80px" ;>Save</button> -->
                         <input class="btn btn-success"
                         type="submit"
                         name="id" value="006">

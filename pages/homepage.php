@@ -9,22 +9,16 @@
   <title> WatchBuddy - Homepage</title>
   <link rel="stylesheet" href="../css-bootstrap/bootstrap.min.css">
   <link rel="stylesheet" href="style.css" type=text/css>
-  <script src="https://ajax.googleapis.com/ajvax/libs/jquery/2.2.0/jquery.min.js"></script>
-  
-
 </head>
 
 <body>
   <section>
-
     <?php
       include('navbar.php');
     ?>
-
     <div class="container">
       <div class="row">
         <div class="col-sm" >
-          
           <div class="row">
               <div class="card">
                 <div class = "iframe-container">
