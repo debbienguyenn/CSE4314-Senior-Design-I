@@ -59,7 +59,7 @@
             <?php
             if(!isset($_SESSION['username']))
             {
-              echo '<div class="col-2">
+              echo '<div class="col-3">
               <a href="Login.php">Login</a>
               &emsp;
               <a href="SignUp.php">Sign Up</a>
@@ -67,7 +67,7 @@
             }
             else
             {
-              echo '<div class="col-2">
+              echo '<div class="col-3">
               <a href="profile.php">Me</a>
               &emsp;
               <a href="Meet.php">Meet</a>
