@@ -196,6 +196,6 @@
     ?>
 
 <script>
-$('#button_clicked').on('click', function() { window.location = 'processing/Buddies.php'; });
+$('#button_clicked').on('click', function() { window.location = '../processing/Buddies.php'; });
 </script>
         
