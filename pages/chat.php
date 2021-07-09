@@ -19,7 +19,7 @@
     <div class="container">
         <div class="msg-header">
             <div class="profile-pic">
-                <img src="../images/<?php echo $_SESSION['userImage']; ?>" alt="">
+                <img src="../images/users/<?php echo $_SESSION['userImage']; ?>" alt="">
             </div>
         <div class="active">
             <?php
