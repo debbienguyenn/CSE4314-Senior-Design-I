@@ -63,7 +63,8 @@ if($num==1)
      else
      {
           $add = "INSERT INTO buddies(userID, buddyID) VALUES('$username','$buddy')";
-          if(mysqli_query($conn, $add))
+          $add2 = "INSERT INTO buddies(userID, buddyID) VALUES('$username','$buddy')";
+          if(mysqli_query($conn, $add) && mysqli_query($conn, $add2))
           {
                echo '<script>alert("Buddy Added!")</script>';
                echo '<script>window.location=\'../pages/profile.php\'</script>';
