@@ -13,12 +13,6 @@
     <link rel="stylesheet" href="../css-bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="style.css" type=text/css>
     <title>Available Vidoes</title>
-    <style>
-         footer
-         {
-             position: fixed !important;
-         }
-     </style>
 
 </head>
 <body>
@@ -28,18 +22,16 @@
     ?>
 
     <form class="form-container" action="../processing/SaveVideo.php" method="post">
+        <h1> Anime Videos</h1>    
         <div class="container">
-            <h1> Funny Videos</h1>
-            <div class="row justify-content-center">
+            
+            <!-- <div class="row justify-content-center">
                 <div class="col-sm" align="center">
                     <div class="card">
                         <div class = "iframe-container">
                         <iframe width="400" height="240" src="https://www.youtube.com/embed/iwZWK2WoogY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                        </div>
                     </div>
                     <div>
-                        <!--
-                        <button id="123" type="submit" class="btn btn-success" style="width: 80px" ;>Save</button>
-                   -->
                         <input class="btn btn-success"
                         type="submit"
                         name="id" value="013">
@@ -51,9 +43,6 @@
                         <iframe width="400" height="240" src="https://www.youtube.com/embed/2sJYOlINqfs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                        </div>
                     </div>
                     <div>
-                    <!--
-                        <button type="submit" class="btn btn-success" style="width: 80px" ;>Save</button>
-                   -->
                         <input class="btn btn-success"
                         type="submit"
                         name="id" value="014">
@@ -66,7 +55,6 @@
                         <iframe width="400" height="240" src="https://www.youtube.com/embed/bJlPDU4VZT4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                        </div>
                     </div>
                     <div>
-                        <!-- <button type="submit" class="btn btn-success" style="width: 80px" ;>Save</button> -->
                         <input class="btn btn-success"
                         type="submit"
                         name="id" value="015">
@@ -82,7 +70,6 @@
                         <iframe width="400" height="240" src="https://www.youtube.com/embed/oEWl3NPVp6Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                        </div>
                     </div>
                     <div>
-                        <!-- <button type="submit" class="btn btn-success" style="width: 80px" ;>Save</button> -->
                         <input class="btn btn-success"
                         type="submit"
                         name="id" value="016">
@@ -94,7 +81,6 @@
                         <iframe width="400" height="240" src="https://www.youtube.com/embed/bj0B7FOYw-8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                        </div>
                     </div>
                     <div>
-                        <!-- <button type="submit" class="btn btn-success" style="width: 80px" ;>Save</button> -->
                         <input class="btn btn-success"
                         type="submit"
                         name="id" value="017">
@@ -106,14 +92,56 @@
                         <iframe width="400" height="240" src="https://www.youtube.com/embed/bJlPDU4VZT4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                        </div>
                     </div>
                     <div>
-                        <!-- <button type="submit" class="btn btn-success" style="width: 80px" ;>Save</button> -->
                         <input class="btn btn-success"
                         type="submit"
                         name="id" value="018">
                     </div>
                 </div>
-
-
+        </div> -->
+        <div class="row justify-content-center">
+            <?php
+                include('../processing/db.php');
+                //get video ID and link list
+                mysqli_select_db($conn, 'videos');
+                $username = $_SESSION['username'];
+                $video_query = "SELECT videoID, link from videos where Name = 'anime'";
+                $video_result = mysqli_query($conn, $video_query);
+                $video_list = array();
+                if(mysqli_num_rows($video_result)>0)
+                {
+                    while($list = mysqli_fetch_assoc($video_result))
+                    {
+                        $video_list[] = $list;
+                    }
+                }
+                
+                
+                //display each link onto profile page
+                foreach($video_list as $video)
+                {
+                    $link = $video['link'];
+                    $videoID = $video['videoID'];
+                    $html = '<div class="col-3">
+                    <div class="card">
+                        <div class = "iframe-container">
+                        <iframe width="400" height="240" 
+                        src="'.$link.'"title="YouTube video player" frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
+                        gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="button"><img src=../images/icons/save.png style="width:40px"></label>
+                        <input class="btn btn-success"
+                        type="submit" id="button"
+                        name="id" value="'.$videoID.'" style="display:none">
+                    </div>
+                    </div>
+                    &emsp;';
+                    echo $html;
+                }
+               
+            ?>
         </div>
      </form>
     </section>

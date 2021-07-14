@@ -1,6 +1,7 @@
 /**********************General***********************/
 h1 {
   color: grey;
+  text-align: center !important;
 }
 p {
   color: grey;
@@ -80,7 +81,9 @@ nav ul li {
 /*****************************************************************/
 
 .form-container {
-  padding: 50px 60px;
+  /* padding: 50px 60px; */
+  margin-left: 0;
+  margin-right: 0;
 }
 /*
 .container {
