@@ -30,6 +30,6 @@
         }
     }
     else{
-        header("pages/homepage.php");
+        header("../pages/homepage.php");
     }
 ?>

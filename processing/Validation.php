@@ -11,6 +11,7 @@ $username= filter_input(INPUT_POST, 'username');
 $psw= filter_input(INPUT_POST, 'psw');
 
 //validate credentials
+//consider SQL INJECTION
 $s = "SELECT * from registration where username= '$username' && psw= '$psw'";
 $result = mysqli_query($conn, $s);
 $num = mysqli_num_rows($result);

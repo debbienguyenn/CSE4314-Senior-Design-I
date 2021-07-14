@@ -26,7 +26,7 @@ sendBtn.onclick = () => {
 
 setInterval(() => {
   let xhr = new XMLHttpRequest();
-  xhr.open("POST", "processing/get-chat.php", true);
+  xhr.open("POST", "get-chat.php", true);
   xhr.onload = () => {
     if (xhr.readyState === XMLHttpRequest.DONE) {
       if (xhr.status === 200) {
