@@ -127,14 +127,19 @@
 
 
 
+
                             
-                            
-                            $link_query = "SELECT * FROM videos WHERE $link = link";
+                            $link_query = "SELECT videoID FROM videos WHERE link = '$link'";
                             $link_result = mysqli_query($conn, $link_query);
                             //echo '<script> alert($link_result.videoID); </script>' ;
                             //echo "<script> console.log('$link_result.['videoID']'; </script>";
-                            //$like_query= "DELETE FROM likedVideos WHERE videoID = $link_result.videoID";
-                            //$like_result = mysqli_query($conn, $like_query);
+                            $IDnum = mysqli_num_rows($link_result);
+                            $IDarr = array();
+                            $IDarr[] = $IDnum;
+                            $ID = $IDarr[0];
+                            echo "<script>alert($ID)</script>";
+                            $like_query= "DELETE FROM likedVideos WHERE videoID = '$ID'";
+                            $like_result = mysqli_query($conn, $like_query);
 
 
 
