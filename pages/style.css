@@ -1,0 +1,364 @@
+/**********************General***********************/
+h1 {
+  color: grey;
+  text-align: center !important;
+}
+p {
+  color: grey;
+}
+h2 {
+  color: grey;
+}
+h3 {
+  color: grey;
+}
+h4 {
+  color: grey;
+}
+h5 {
+  color: white;
+}
+h6 {
+  color: grey;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+header {
+  height: 100px;
+  background-color: #cdeaea;
+}
+section {
+  height: 100%;
+  background-color: white;
+  background-repeat: no-repeat;
+  background-size: auto;
+  float: center;
+}
+footer {
+  /*background-color:#17202A;*/
+  background-color: rgb(241, 242, 243);
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  padding: 10px 10px 0px 10px;
+  color: grey;
+}
+.logo {
+  width: 200px;
+  cursor: pointer;
+  animation: movedown 1s linear 1;
+  animation-delay: 1s;
+  visibility: hidden;
+  animation-fill-mode: forwards;
+}
+
+@keyframes movedown {
+  0% {
+    transform: translate(-100px);
+    visibility: visible;
+  }
+  100% {
+    transform: translate(0);
+    visibility: visible;
+  }
+}
+
+nav {
+  flex: 1;
+  padding-left: 60px;
+}
+nav ul li {
+  display: inline-block;
+  list-style: none;
+  margin: 0px 20px;
+}
+
+/*****************************************************************/
+
+.form-container {
+  /* padding: 50px 60px; */
+  margin-left: 0;
+  margin-right: 0;
+}
+/*
+.container {
+  height: auto;
+  position: relative;
+  display: inline-block;
+  align-items: center;
+}*/
+
+.vertical-center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+/* for Sign Up/*
+* {box-sizing: border-box}
+
+/* Full-width input fields */
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #4caf50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+button:hover {
+  opacity: 1;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: #f44336;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn,
+.signupbtn {
+  float: left;
+  width: 50%;
+}
+
+/* Add padding to container elements */
+.container {
+  padding: 16px;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+  .cancelbtn,
+  .signupbtn {
+    width: 100%;
+  }
+}
+
+/* End of Sign up */
+
+label {
+  cursor: pointer;
+  color: #f1f1f1;
+  display: block;
+  padding: 10px;
+  margin: 3px;
+}
+
+/*video*/
+.iframe-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  height: 0;
+}
+.iframe-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/*
+.box{
+  box-sizing: border-box;
+  border: 3px solid transparent;
+  background-clip:padding-box;
+}*/
+
+/*
+.row div{
+  padding-left: 8px;
+  padding-right: 8px;
+}*/
+
+.container {
+  /* max-width: 500 !important; */
+  margin-top: 4%;
+  margin-left: auto;
+  margin-right: auto;
+  letter-spacing: 0.5px;
+}
+img {
+  max-width: 100%;
+}
+.msg-header {
+  border: 1px solid #ccc;
+  width: 100%;
+  height: 10%;
+  border-bottom: none;
+  display: inline-block;
+  background-color: hsl(348, 45%, 98%);
+}
+.profile-pic {
+  border-radius: 50%;
+  width: 40px;
+  margin-left: 0%;
+  margin-top: 12px;
+  float: left;
+}
+.active {
+  width: 120px;
+  float: left;
+  margin-top: 10px;
+}
+.p {
+  font-weight: 900;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: smaller;
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+.msg-inbox {
+  border: 1px solid #ccc;
+  overflow: hidden;
+  padding-bottom: 30px;
+}
+.chats {
+  padding: 30px 15px 0 25px;
+}
+.msg-page {
+  height: 516px;
+  overflow-y: auto;
+}
+.received-chats-img {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+}
+.received-chats {
+  display: inline-block;
+  padding: 0 0 0 10px;
+  vertical-align: top;
+  width: 92%;
+}
+.received-msg-inbox {
+  margin-left: 10px;
+  margin-right: auto;
+  max-width: calc(100%-130px);
+}
+.received-msg-inbox p {
+  background: rgba(255, 255, 255, 0.849);
+  border-radius: 10px;
+  color: #333;
+  font-size: 14px;
+  margin: 0;
+  padding: 5px 10px 5px 12px;
+  width: 100%;
+}
+.outgoing-chats {
+  overflow: hidden;
+  margin: 26px 20px;
+}
+.outgoing-chats-msg p {
+  background: #007bff none repeat scroll 0 0;
+  color: #fff;
+  border-radius: 10px;
+  font-size: 14px;
+  margin: 0;
+  color: #fff;
+  padding: 5px 10px 5px 12px;
+  width: 100%;
+}
+.outgoing-chats-msg {
+  float: left;
+  width: 46%;
+  margin-left: 45%;
+}
+.outgoing-chats-img {
+  display: inline-block;
+  width: 20px;
+  float: none;
+}
+.chat-page .typing-area {
+  padding: 18px 30px;
+  display: flex;
+  justify-content: space-between;
+}
+.typing-area input {
+  height: 45px;
+  width: calc(100%-80px);
+  font-size: 17px;
+  border: 1px solid #ccc;
+  padding: 0 13px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+}
+.typing-area button {
+  width: 80px;
+  height: 50px;
+  border: none;
+  background: #008cba;
+  color: #fff;
+  font-size: 17px;
+  cursor: pointer;
+  border-radius: 0 5px 5px 0;
+}
+.button i {
+  float: right;
+  margin-bottom: 5%;
+  width: 40%;
+}
+/*.input-group{
+    float: right;
+    margin-top: 13px;
+    margin-right: 20px;
+    outline: none !important;
+    border-radius: 20px;
+    width: 61% !important;
+    background-color: #fff;
+  }
+  .input-field{
+    border: none !important;
+    border-radius: 20px !important;
+  }
+  .input-group-text{
+    background: transparent !important;
+    border: none !important;
+  }
+  .input-field :focus{
+    border-color: none !important;
+    box-shadow: none !important;
+    border-radius: 20px;
+  }*/
