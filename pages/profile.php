@@ -18,7 +18,7 @@
      <style>
          footer
          {
-             position: fixed !important;
+            position: fixed !important;
          }
      </style>
 </head>
@@ -109,6 +109,15 @@
                                 </div>
                             </div>
                             </div>
+
+                            <div>
+                            <form action="../processing/unsave.php" method="POST">
+                            <input class="btn btn-success"
+                            type="submit" id="button"
+                            name="unlike_button" value="Remove" style="float: right; background: #FF0000">
+                            <input type=text name="unliked" value="'.$link.'" hidden></form>
+                            </div>
+
                             &emsp;';
                             echo $html;
                         }
@@ -187,7 +196,9 @@
                         echo "<a href = ../processing/chat_action.php?buddyID=".$buddies."><img src=../images/icons/chat.png style='width:25px'></a>";
 
                         echo "<br>";
+
                     }
+
                     ?>
                 </div>
             </div>
@@ -195,11 +206,10 @@
         
     </section>
 
-    <?php
-        include('footer.php');
-    ?>
-
 <script>
 $('#button_clicked').on('click', function() { window.location = '../processing/Buddies.php'; });
 </script>
-        
+
+<?php
+        include('footer.php');
+    ?>

@@ -340,6 +340,9 @@ img {
   margin-bottom: 5%;
   width: 40%;
 }
+.talk{
+  background: #008cba;
+}
 /*.input-group{
     float: right;
     margin-top: 13px;
