@@ -31,7 +31,7 @@
         <?php
             include('pages/navbar.php');
         ?>
-      <form class="form-container" action="processing/search_action.php" method="post">
+      <form class="form-container" action="../processing/search_action.php" method="post">
         <div class="container">
             <div class="row justify-content-center">
               <h2 align="center">Add Buddies!</h2>
@@ -45,7 +45,7 @@
         </div>
       </form>
 
-      <form class="form-container" action="deletebuddy_action.php" method="post">
+      <form class="form-container" action="../processing/deletebuddy_action.php" method="post">
         <div class="container">
             <div class="row justify-content-center">
               <label style="color:grey" for="buddy" class="col-6">Enter Buddy's Username</label>

@@ -130,15 +130,11 @@
                         gyroscope; picture-in-picture" allowfullscreen></iframe>
                         </div>
                     </div>
-                    <div>
-                        <label for="button"><img src=../images/icons/save.png style="width:40px"></label>
-                        <input class="btn btn-success"
-                        type="submit" id="button"
-                        name="id" value="'.$videoID.'" style="display:none">
-                    </div>
+                    
                     </div>
                     &emsp;';
                     echo $html;
+                    echo "<a href = ../processing/SaveVideo.php?id=".$videoID."><img src=../images/icons/save.png style='width:40px'></a>";
                 }
                
             ?>
