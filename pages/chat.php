@@ -1,11 +1,6 @@
 <?php
    session_start();
-   if(!isset($_SESSION['username']))
-   {
-       header('location: Login.php');
-   }
 ?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,19 +14,24 @@
     <div class="container">
         <div class="msg-header">
             <div class="profile-pic">
-                <img src="../images/users/<?php echo $_SESSION['userImage']; ?>" alt="">
+                <img src="../images/profile.jpg" alt="">
             </div>
         <div class="active">
             <?php
                 include("../processing/db.php");
+                mysqli_select_db($conn, 'registration');
+                mysqli_select_db($conn, 'chat');
+                mysqli_select_db($conn, 'buddies');
                 $username = $_SESSION['username'];
-                $sql = mysqli_query($conn, "SELECT * FROM registration INNER JOIN buddies ON buddies.BuddyId = registration.username");
+                $buddyVar = $_POST['bname'];
+                $sql = mysqli_query($conn, "SELECT * FROM registration WHERE '$buddyVar' = registration.username");
                 if(mysqli_num_rows($sql)>0){
                     $row = mysqli_fetch_assoc($sql);
                 }
-                // need to add line to go to home page if no buddy found.
-                ?>
-            <P><?php echo $row['firstname']." ".$row['lastname'] ?></p>
+            ?>
+
+            <p><?php echo $row['firstname']." ".$row['lastname'] ?></p>
+
         </div>
         </div>
 
@@ -45,7 +45,7 @@
                         <img src="images/profile.jpg">
                     </div>
                     <div class="received-msg-inbox">
-                        <p> I am receiver. </p>
+                        <p></p>
                     </div>
                     </div>
 
@@ -54,20 +54,23 @@
                         <img src="images/profile.jpg">
                         </div>
                         <div class="outgoing-chats-msg">
-                            <p> I am sender. </p>
+                            <p></p>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <form action="#" class='typing-area' autocomplete="off">                
-                    <input type="text" name="outgoing_id" value="<?php echo $username; ?>" hidden >
-                    <input type="text" name="incoming_id" value="<?php echo $row['username']; ?>" hidden >
+            <form action="#" class='typing-area' method= "POST" autocomplete="off">   
+                    <input type="text" name="outgoing_id" value="<?php echo $_SESSION['username']; ?>" hidden>
+                    <input type="text" name="incoming_id" value="<?php echo $row['username']; ?>" hidden>       
                     <input type="text" name="message" class="input-field" placeholder="Type here.....">
-                    <button><i type="button" class="button">Send</i></button>
+                    <!-- <button><i type="button" class="button">Send</i></button> -->
+                    <button type="submit" class="button" style="width: 150px" ;>Send</button>
             </form>
         </div>
     </div>
+
+  
 
     <script src="../processing/chat.js"></script>
 

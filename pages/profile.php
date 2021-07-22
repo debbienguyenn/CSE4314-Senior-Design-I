@@ -18,7 +18,7 @@
      <style>
          footer
          {
-             position: fixed !important;
+            position: fixed !important;
          }
      </style>
 </head>
@@ -109,6 +109,15 @@
                                 </div>
                             </div>
                             </div>
+
+                            <div>
+                            <form action="../processing/unsave.php" method="POST">
+                            <input class="btn btn-success"
+                            type="submit" id="button"
+                            name="unlike_button" value="Remove" style="float: right; background: #FF0000">
+                            <input type=text name="unliked" value="'.$link.'" hidden></form>
+                            </div>
+
                             &emsp;';
                             echo $html;
                         }
@@ -179,11 +188,16 @@
                         print_r($buddies);
                         print_r("    ");
                         //add buttons to remove friend and chat here.. 
+                        $buddyName = '<form action="chat.php" method="post">
+                                        <input type="text" name="bname" value='.$buddies.' hidden>
+                                        <input type="submit" value="Chat" style="float:right"></form>';
                         $html = '<button style="width:150px" class="btn btn-outline-danger" type="submit" id="deleteBuddiesbtn" name="deleteBuddiesbtn">Unbuddy</button>';
-                        echo $html;
-
+                        echo $buddyName;
+                        echo $html;                        
                         echo "<br>";
+
                     }
+
                     ?>
                 </div>
             </div>
@@ -191,11 +205,10 @@
         
     </section>
 
-    <?php
-        include('footer.php');
-    ?>
-
 <script>
 $('#button_clicked').on('click', function() { window.location = '../processing/Buddies.php'; });
 </script>
-        
+
+<?php
+        include('footer.php');
+    ?>
