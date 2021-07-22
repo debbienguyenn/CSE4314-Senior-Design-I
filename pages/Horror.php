@@ -130,16 +130,10 @@
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
                         gyroscope; picture-in-picture" allowfullscreen></iframe>
                         </div>
-                    </div>
-                    <div>
-                        <label for="button"><img src=../images/icons/save.png style="width:40px"></label>
-                        <input class="btn btn-success"
-                        type="submit" id="button"
-                        name="id" value="'.$videoID.'" style="display:none">
-                    </div>
-                    </div>
-                    &emsp;';
+                    </div>';
                     echo $html;
+                    echo "<div><a href = ../processing/SaveVideo.php?id=".$videoID."><img src=../images/icons/save.png style='width:40px'></a></div></div>
+                    &emsp;";
                 }
                
             ?>

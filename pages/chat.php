@@ -23,7 +23,7 @@
                 mysqli_select_db($conn, 'chat');
                 mysqli_select_db($conn, 'buddies');
                 $username = $_SESSION['username'];
-                $buddyVar = $_POST['bname'];
+                $buddyVar = $_GET[buddyID];
                 $sql = mysqli_query($conn, "SELECT * FROM registration WHERE '$buddyVar' = registration.username");
                 if(mysqli_num_rows($sql)>0){
                     $row = mysqli_fetch_assoc($sql);

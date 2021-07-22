@@ -31,7 +31,7 @@
         <div class="container">
             <div class="row justify-content-center">
                 <!--first column-->
-                <div class="col-3" style="border-right: 1px solid lightgrey; height:500px">
+                <div class="col-3" style="border-right: 1px solid lightgrey; height:auto">
                     <!--Display-->
                     <img style="border-radius: 50%" src="../images/users/<?php echo $_SESSION['userImage']; ?>" alt="" 
                     width="120px" height="120px">
@@ -108,16 +108,14 @@
                                 gyroscope; picture-in-picture" allowfullscreen></iframe>
                                 </div>
                             </div>
-                            </div>
-
                             <div>
                             <form action="../processing/unsave.php" method="POST">
-                            <input class="btn btn-success"
+                            <input class="btn btn-outline-danger""
                             type="submit" id="button"
-                            name="unlike_button" value="Remove" style="float: right; background: #FF0000">
+                            name="unlike_button" value="Remove" style="float: right;">
                             <input type=text name="unliked" value="'.$link.'" hidden></form>
                             </div>
-
+                            </div>
                             &emsp;';
                             echo $html;
                         }
@@ -192,8 +190,8 @@
                         echo $buddies;
                         print_r("     ");
                         //add buttons to remove friend and chat here.. 
-                        echo "<a href = ../processing/deletebuddy_action.php?buddyID=".$buddies."><img src=../images/icons/delete.png style='width:25px'></a>";
-                        echo "<a href = ../processing/chat_action.php?buddyID=".$buddies."><img src=../images/icons/chat.png style='width:25px'></a>";
+                        echo '<a style="float: right" href = ../processing/deletebuddy_action.php?buddyID=".$buddies."><img src=../images/icons/delete.png style="width:25px"></a>';
+                        echo '<a style="float: right" href = chat.php?buddyID=".$buddies."><img src=../images/icons/chat.png style="width:25px"></a>';
 
                         echo "<br>";
 

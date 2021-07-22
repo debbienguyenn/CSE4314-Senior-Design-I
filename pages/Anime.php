@@ -131,10 +131,10 @@
                         </div>
                     </div>
                     
-                    </div>
-                    &emsp;';
+                    ';
                     echo $html;
-                    echo "<a href = ../processing/SaveVideo.php?id=".$videoID."><img src=../images/icons/save.png style='width:40px'></a>";
+                    echo "<div><a href = ../processing/SaveVideo.php?id=".$videoID."><img src=../images/icons/save.png style='width:40px'></a></div></div>
+                    &emsp;";
                 }
                
             ?>
