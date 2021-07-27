@@ -143,9 +143,7 @@
 
 
                     <!-- Button is used to direct users to the buddies page for add and deleting friends. Not currently being used. Delete before submission.
-                    
                         <button style="width:300px" class="btn btn-outline-success" type="submit" id="button_clicked"href="Buddies.php">Find Buddies</button>
-
                     -->
 
                     <?php
@@ -194,7 +192,6 @@
                         echo '<a style="float: right" href = chat.php?buddyID=".$buddies."><img src=../images/icons/chat.png style="width:25px"></a>';
 
                         echo "<br>";
-
                     }
 
                     ?>
