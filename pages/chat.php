@@ -23,7 +23,7 @@
                 mysqli_select_db($conn, 'chat');
                 mysqli_select_db($conn, 'buddies');
                 $username = $_SESSION['username'];
-                $buddyVar = $_GET[buddyID];
+                $buddyVar = $_GET['buddyID'];
                 $sql = mysqli_query($conn, "SELECT * FROM registration WHERE '$buddyVar' = registration.username");
                 if(mysqli_num_rows($sql)>0){
                     $row = mysqli_fetch_assoc($sql);
@@ -42,17 +42,14 @@
 
                     <div class="received-chats">
                     <div class="received-chats-img">
-                        <img src="images/profile.jpg">
+                        <img src="../images/profile.jpg">
                     </div>
                     <div class="received-msg-inbox">
                         <p></p>
                     </div>
                     </div>
 
-                    <div class="outgoing-chats">                    
-                        <div class="outgoing-chats-img">
-                        <img src="images/profile.jpg">
-                        </div>
+                    <div class="outgoing-chats">
                         <div class="outgoing-chats-msg">
                             <p></p>
                         </div>
@@ -62,7 +59,7 @@
 
             <form action="#" class='typing-area' method= "POST" autocomplete="off">   
                     <input type="text" name="outgoing_id" value="<?php echo $_SESSION['username']; ?>" hidden>
-                    <input type="text" name="incoming_id" value="<?php echo $row['username']; ?>" hidden>       
+                    <input type="text" name="incoming_id" value="<?php echo $buddyVar; ?>" hidden>       
                     <input type="text" name="message" class="input-field" placeholder="Type here.....">
                     <!-- <button><i type="button" class="button">Send</i></button> -->
                     <button type="submit" class="button" style="width: 150px" ;>Send</button>

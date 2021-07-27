@@ -41,6 +41,8 @@
                 </li>
               </ul>
             </li>
+
+            <button class="room" type="button"> My Room</button>
             <!--search bar-->
             <li>
               <form id=form class="d-flex" method ="POST" action="VideoSearchResults.php">
