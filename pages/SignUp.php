@@ -27,7 +27,7 @@
     </div>
 
     <form class="form-container" action="../processing/Registration.php" method="post">
-      <div class="container-xxl bg">
+      <div class="container-xxl bg" align="center">
         <div class="row">
           <h1 style="color:grey">Sign Up</h1>
           <label style="color:grey">Please fill in this form to create an account.</label>
@@ -58,20 +58,20 @@
             <label style="color:grey" for="birthday"><b>Birth Day</b></label>
             <input type="date" id="birthday" name="birthday" value="2003-01-01" min="1900-01-01" max="2003-01-01">
           </div>
-
-
-
-        </div>
-
-        <label style="color:grey">
+          <label style="color:grey">
           <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
-        </label>
+          </label>
 
-        <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
-
-        <div class="clearfix" align="center">
+          <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
           <button type="submit" class="signupbtn" style="width: 400px" ;>Sign Up</button>
+
+
         </div>
+
+        
+        <!-- <div class="clearfix">
+          <button type="submit" class="signupbtn" style="width: 400px" ;>Sign Up</button>
+        </div> -->
       </div>
     </form>
 

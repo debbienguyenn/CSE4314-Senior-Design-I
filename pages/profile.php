@@ -31,7 +31,7 @@
         <div class="container">
             <div class="row justify-content-center">
                 <!--first column-->
-                <div class="col-3" style="border-right: 1px solid lightgrey; height:auto">
+                <div class="col-3">
                     <!--Display-->
                     <img style="border-radius: 50%" src="../images/users/<?php echo $_SESSION['userImage']; ?>" alt="" 
                     width="120px" height="120px">
@@ -60,7 +60,7 @@
                 </div>
 
                 <!--middle column-->
-                <div class="col-6" style="border-right: 1px solid lightgrey; height:500px;">
+                <div class="col-6">
                     <h1 style="color:3F454C; text-align: center;">Watch List</h1>
                         <?php
                         include('../processing/db.php');
