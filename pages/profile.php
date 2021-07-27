@@ -193,7 +193,8 @@
                         print_r("     ");
                         //add buttons to remove friend and chat here.. 
                         echo "<a href = ../processing/deletebuddy_action.php?buddyID=".$buddies."><img src=../images/icons/delete.png style='width:25px'></a>";
-                        echo "<a href = ../processing/chat_action.php?buddyID=".$buddies."><img src=../images/icons/chat.png style='width:25px'></a>";
+                        print_r("     ");
+                        echo "<a href = ../pages/chat.php?buddyID=".$buddies."><img src=../images/icons/chat.png style='width:25px'></a>";
 
                         echo "<br>";
 
