@@ -63,7 +63,7 @@
                         print_r("     ");
                         
                         //buttons to remove friend and chat here.. 
-                        echo '<a style="float: right" href = ../processing/addding_action.php?buddyID=".$buddies."><img src=../images/icons/add.png style="width:25px"></a>';
+                        echo '<a style="float: right" href = ../processing/roomBuddies_action.php?buddyID=".$buddies."><img src=../images/icons/add.png style="width:25px"></a>';
                         
                         echo "<br>";
 
