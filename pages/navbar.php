@@ -13,7 +13,7 @@
 <div class="container">
   <div class="navbar">
     <a href="Homepage.php">
-      <image src="../images/logo.jpg" class="logo"></image>
+      <image src="../images/logo.png" class="logo"></image>
     </a>
     <nav style="width:1000px" class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">

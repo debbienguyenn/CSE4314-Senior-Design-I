@@ -2,6 +2,7 @@ const form = document.querySelector(".typing-area"),
   inputField = form.querySelector(".input-field"),
   sendBtn = form.querySelector(".button"),
   chatBox = document.querySelector(".msg-page");
+let key = form.querySelector(".key");
 
 form.onsubmit = (e) => {
   e.preventDefault();
@@ -10,7 +11,7 @@ form.onsubmit = (e) => {
 sendBtn.onclick = () => {
   // Ajax start
   var xhr = new XMLHttpRequest();
-  xhr.open("POST", "../processing/insert-chat.php", true);
+  xhr.open("POST", "../processing/insert-group-chat.php", true);
   xhr.onload = function () {
     if (xhr.readyState === 4) {
       if (xhr.status === 200) {
@@ -26,7 +27,7 @@ sendBtn.onclick = () => {
 
 setInterval(() => {
   let xhr = new XMLHttpRequest();
-  xhr.open("POST", "../processing/get-chat.php", true);
+  xhr.open("POST", "../processing/get-group-chat.php", true);
   xhr.onload = () => {
     if (xhr.readyState === XMLHttpRequest.DONE) {
       if (xhr.status === 200) {

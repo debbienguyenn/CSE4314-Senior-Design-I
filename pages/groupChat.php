@@ -23,14 +23,20 @@
                 mysqli_select_db($conn, 'chat');
                 mysqli_select_db($conn, 'buddies');
                 $username = $_SESSION['username'];
-                $buddyVar = $_GET['buddyID'];
-                $sql = mysqli_query($conn, "SELECT * FROM registration WHERE '$buddyVar' = registration.username");
-                if(mysqli_num_rows($sql)>0){
-                    $row = mysqli_fetch_assoc($sql);
+
+                $count = $_POST['count'];
+                $buddies = array();
+                for($i=0; $i<$count; $i++)
+                {
+                    $buddies[]= $_POST[strval($i)];
                 }
+                echo '<p>';
+                foreach($buddies as $buddy ){
+                    echo $buddy.', ';
+                }
+                echo '</p>';
             ?>
 
-            <p><?php echo $row['firstname']." ".$row['lastname'] ?></p>
 
         </div>
         </div>
@@ -59,9 +65,14 @@
 
             <form action="#" class='typing-area' method= "POST" autocomplete="off">   
                     <input type="text" name="outgoing_id" value="<?php echo $_SESSION['username']; ?>" hidden>
-                    <input type="text" name="incoming_id" value="<?php echo $buddyVar; ?>" hidden>       
+                   
                     <input type="text" name="message" class="input-field" placeholder="Type here.....">
-                    
+                    <?php
+                        $key = md5(time());
+                        $addKey = substr(md5(uniqid(rand(), 1)), 3, 10);
+                        $key = $key . $addKey;
+                        echo ' <input type="text" name="key" class="key" value="'.$key.'" hidden> ';
+                    ?>
                     <!-- <button><i type="button" class="button">Send</i></button> -->
                     <button type="submit" class="button" style="width: 150px" ;>Send</button>
             </form>
@@ -70,7 +81,7 @@
 
   
 
-    <script src="../processing/chat.js"></script>
+    <script src="../processing/group-chat.js"></script>
 
 </body>
 </html>
