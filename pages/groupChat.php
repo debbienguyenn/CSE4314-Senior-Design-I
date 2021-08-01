@@ -72,6 +72,8 @@
             
             <form action="#" class='typing-area' method= "POST" autocomplete="off">   
                     <input type="text" name="outgoing_id" value="<?php echo $_SESSION['username']; ?>" hidden>
+                    <input type="text" name="key" value="<?php echo $key; ?>" hidden>
+
                     <?php
                         // $i=0;
                         //  foreach($buddies as $buddy ){
