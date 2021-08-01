@@ -18,21 +18,25 @@
             </div>
         <div class="active">
             <?php
-                include("../processing/db.php");
-                mysqli_select_db($conn, 'registration');
-                mysqli_select_db($conn, 'chat');
-                mysqli_select_db($conn, 'buddies');
-                $username = $_SESSION['username'];
 
-                $count = $_POST['count'];
-                $buddies = array();
-                for($i=0; $i<$count; $i++)
+                include("../processing/db.php");
+                mysqli_select_db($conn, 'rooms');
+                $key = $_GET['key'];
+                $buddies_query = "SELECT username from rooms where roomID = '$key'";
+                $buddies_result = mysqli_query($conn, $buddies_query);
+                $buddies_list = array();
+                if(mysqli_num_rows($buddies_result)>0)
                 {
-                    $buddies[]= $_POST[strval($i)];
+                    while($list = mysqli_fetch_assoc($buddies_result))
+                    {
+                        $buddies_list[] = $list;
+                    }
                 }
+                
                 echo '<p>';
-                foreach($buddies as $buddy ){
-                    echo $buddy.', ';
+                foreach($buddies_list as $buddy ){
+                    if($buddy['username'] != $_SESSION['username'])
+                    echo $buddy['username'].', ';
                     // mysqli_select_db($conn, 'rooms');
                     // $sql = "INSERT INTO rooms(roomID, username) VALUES()";
                     // $query = mysqli_query($conn, $sql);
@@ -65,7 +69,7 @@
                     </div>
                 </div>
             </div>
-
+            
             <form action="#" class='typing-area' method= "POST" autocomplete="off">   
                     <input type="text" name="outgoing_id" value="<?php echo $_SESSION['username']; ?>" hidden>
                     <?php
@@ -77,19 +81,7 @@
                         // echo '<input type="text" name="count" class="count" value='.$i.' hidden>' ;
                     ?>
                     <input type="text" name="message" class="input-field" placeholder="Type here.....">
-                    <?php
-                        $key = $_GET["key"];
-                        
-                        //add users to room
-                        mysqli_select_db($conn, 'rooms');
-                        $current_user = $_SESSION['username'];
-                        $sql = "INSERT INTO rooms(roomID, username) VALUES('$key', '$current_user')";
-                        $query = mysqli_query($conn, $sql);
-                        foreach($buddies as $buddy ){
-                            $sql = "INSERT INTO rooms(roomID, username) VALUES('$key', '$buddy')";
-                            $query = mysqli_query($conn, $sql);
-                        }
-                    ?>
+                    
                     <!-- <button><i type="button" class="button">Send</i></button> -->
                     <button type="submit" class="button" style="width: 150px" ;>Send</button>
             </form>

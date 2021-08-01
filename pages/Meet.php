@@ -107,7 +107,7 @@
                 $addKey = substr(md5(uniqid(rand(), 1)), 3, 10);
                 $key = $key . $addKey;
                 $form = 
-                '<form class="form-container" action="groupChat.php?key='.$key.'" method="post" id="create-group">
+                '<form class="form-container" action="../processing/createRoom.php?key='.$key.'" method="post" id="create-group">
                     <button type="button" onClick="addCount()">Done</button>
                     <button  type="submit" class="btn btn-success" style="width: 150px" ;>Create Group</button>
                 </form>';
