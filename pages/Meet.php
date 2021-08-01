@@ -83,8 +83,6 @@
                         {
                             $buddies = $buddyname['BuddyID'];
                             
-                            
-                            
                             //buttons add buddies to the chat 
                             // echo '<a style="float: right" href = ../processing/roomBuddies_action.php?buddyID=".$buddies."><img src=../images/icons/add.png style="width:25px"></a>';
                             
@@ -103,10 +101,19 @@
                 
                 
             </div>
-            <form class="form-container" action="groupChat.php" method="post" id="create-group">
-            <button type="button" onClick="addCount()">Done</button>    
-            <button  type="submit" class="btn btn-success" style="width: 150px" ;>Create Group</button>
-            </form>   
+            
+            <?php
+                $key = md5(time());
+                $addKey = substr(md5(uniqid(rand(), 1)), 3, 10);
+                $key = $key . $addKey;
+                $form = 
+                '<form class="form-container" action="groupChat.php?key='.$key.'" method="post" id="create-group">
+                    <button type="button" onClick="addCount()">Done</button>
+                    <button  type="submit" class="btn btn-success" style="width: 150px" ;>Create Group</button>
+                </form>';
+               echo $form;
+            ?>
+             
         </div>
     </section>
 </body>

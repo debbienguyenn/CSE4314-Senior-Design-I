@@ -33,9 +33,9 @@
                 echo '<p>';
                 foreach($buddies as $buddy ){
                     echo $buddy.', ';
-                    mysqli_select_db($conn, 'rooms');
-                    $sql = "INSERT INTO rooms(roomID, username) VALUES()";
-                    $query = mysqli_query($conn, $sql);
+                    // mysqli_select_db($conn, 'rooms');
+                    // $sql = "INSERT INTO rooms(roomID, username) VALUES()";
+                    // $query = mysqli_query($conn, $sql);
                 }
                 echo '</p>';
             ?>
@@ -69,19 +69,16 @@
             <form action="#" class='typing-area' method= "POST" autocomplete="off">   
                     <input type="text" name="outgoing_id" value="<?php echo $_SESSION['username']; ?>" hidden>
                     <?php
-                        $i=0;
-                         foreach($buddies as $buddy ){
-                            echo '<input type="text" name="'.$i.'" value='.$buddy.' hidden>';
-                            $i++;
-                        }
-                        echo '<input type="text" name="count" class="count" value='.$i.' hidden>' ;
+                        // $i=0;
+                        //  foreach($buddies as $buddy ){
+                        //     echo '<input type="text" name="'.$i.'" value='.$buddy.' hidden>';
+                        //     $i++;
+                        // }
+                        // echo '<input type="text" name="count" class="count" value='.$i.' hidden>' ;
                     ?>
                     <input type="text" name="message" class="input-field" placeholder="Type here.....">
                     <?php
-                        $key = md5(time());
-                        $addKey = substr(md5(uniqid(rand(), 1)), 3, 10);
-                        $key = $key . $addKey;
-                        echo ' <input type="text" name="key" class="key" value="'.$key.'" hidden> ';
+                        $key = $_GET["key"];
                         
                         //add users to room
                         mysqli_select_db($conn, 'rooms');
