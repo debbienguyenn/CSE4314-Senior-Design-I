@@ -33,7 +33,12 @@
                 <!--first column-->
                 <div class="col-3">
                     <!--Display-->
-                    <img style="border-radius: 50%" src="../images/users/<?php echo $_SESSION['userImage']; ?>" alt="" 
+                    <img style="border-radius: 50%" src="../images/users/<?php
+                        if(isset($_SESSION['userImage'])) 
+                            echo $_SESSION['userImage'];
+                        else
+                            echo 'default-profile-picture.png';
+                    ?>" alt="" 
                     width="120px" height="120px">
                     <b style="text-align:center; margin-left: 25px;">
                     <?php echo $_SESSION['username']; ?>
@@ -186,13 +191,11 @@
                     {
                         $buddies = $buddyname['BuddyID'];
                         echo $buddies;
-                        print_r("     ");
                         //add buttons to remove friend and chat here.. 
-                        echo "<a href = ../processing/deletebuddy_action.php?buddyID=".$buddies."><img src=../images/icons/delete.png style='width:25px'></a>";
-                        print_r("     ");
-                        echo "<a href = ../pages/chat.php?buddyID=".$buddies."><img src=../images/icons/chat.png style='width:25px'></a>";
+                        echo "<a style=\"float: right\" \ href = ../processing/deletebuddy_action.php?buddyID=".$buddies."><img src=../images/icons/delete.png style='width:25px'></a>";
+                        echo "<a style=\"float: right\"  href = ../pages/chat.php?buddyID=".$buddies."><img src=../images/icons/chat.png style='width:25px'></a>";
 
-                        echo "<br>";
+                        echo "<pre></pre>";
                     }
                     ?>
                 </div>

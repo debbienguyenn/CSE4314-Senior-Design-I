@@ -6,7 +6,7 @@
        $roomID = mysqli_real_escape_string($conn, $_POST['key']);
        $output = "";
         $curent_user = $_SESSION['username'];
-       $sql = "SELECT * FROM groupchat WHERE roomID='$roomID'";
+       $sql = "SELECT * FROM groupchat WHERE roomID='$roomID' order by sentAt";
         // $sql = "SELECT * FROM groupchat WHERE (username = '$outgoing_id' AND roomID = '$roomID')";
         $query = mysqli_query($conn, $sql);
         if(mysqli_num_rows($query)>0){

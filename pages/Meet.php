@@ -64,6 +64,7 @@
                                 let input = document.createElement(\'input\');
                                 input.value = buddyName;
                                 input.name = count;
+                               
                                 createGroup.appendChild(input);
                                 count++;
                             } 
@@ -89,31 +90,30 @@
                             // echo "<br>";
                             
                             $html ='<div class="row">'.$buddies.'
-                            <button onClick="addBuddy(\''.$buddies.'\')" class="btn btn-success"
+                            <button onClick="addBuddy(\''.$buddies.'\')" class="btn btn-light"
                             type="submit" id="button"
                             name="buddyId" value="'.$buddies.'">Add</button>
                             </div>';
                             echo $html;
                             
                         }
+                        echo '<button type="btn btn-success" onClick="addCount()">Done</button>';
+
                         ?>
-                        
-                
-                
             </div>
             
-            <?php
-                $key = md5(time());
-                $addKey = substr(md5(uniqid(rand(), 1)), 3, 10);
-                $key = $key . $addKey;
-                $form = 
-                '<form class="form-container" action="../processing/createRoom.php?key='.$key.'" method="post" id="create-group">
-                    <button type="button" onClick="addCount()">Done</button>
-                    <button  type="submit" class="btn btn-success" style="width: 150px" ;>Create Group</button>
-                </form>';
-               echo $form;
+            <div class='col-10'>
+                <?php
+                    $key = md5(time());
+                    $addKey = substr(md5(uniqid(rand(), 1)), 3, 10);
+                    $key = $key . $addKey;
+                    $form = 
+                    '<form class="form-container" action="../processing/createRoom.php?key='.$key.'" method="post" id="create-group">
+                        <button  type="submit" class="btn btn-success" style="width: 150px" ;>Create Group</button>
+                    </form>';
+                echo $form;
             ?>
-             
+            </div>
         </div>
     </section>
 </body>
@@ -122,8 +122,3 @@
     include('footer.php');
 ?>
 
-<script>
-    function addBuddy(){
-        alert("hello"!);
-    }
-</script>

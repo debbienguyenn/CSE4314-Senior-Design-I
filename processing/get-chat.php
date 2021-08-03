@@ -6,8 +6,8 @@
        $incoming_id = mysqli_real_escape_string($conn, $_POST['incoming_id']);
        $output = "";
 
-$sql = "SELECT * FROM chat WHERE (fromUser = '$outgoing_id' AND toUser = '$incoming_id')
-                OR (fromUser = '$incoming_id' AND toUser =  '$outgoing_id')";
+        $sql = "SELECT * FROM chat WHERE (fromUser = '$outgoing_id' AND toUser = '$incoming_id')
+                OR (fromUser = '$incoming_id' AND toUser =  '$outgoing_id') order by sentAt";
         $query = mysqli_query($conn, $sql);
         if(mysqli_num_rows($query)>0){
             while($row = mysqli_fetch_assoc($query)){

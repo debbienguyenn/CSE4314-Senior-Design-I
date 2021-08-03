@@ -6,7 +6,7 @@
         $message = mysqli_real_escape_string($conn, $_POST['message']);
         
         if(!empty($message)){
-            $sql = mysqli_query($conn, "INSERT INTO groupchat 
+            $sql = mysqli_query($conn, "INSERT INTO groupchat(roomID, username, msg) 
                                     VALUES ('$roomID', '$outgoing', '$message')") or die();
         }
         else{
