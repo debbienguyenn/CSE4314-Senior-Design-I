@@ -32,9 +32,10 @@ header {
   height: 100px;
   background-color: #cdeaea;
 }
+
 section {
   height: 100%;
-  background-color: whitek;
+  background-color: white;
   background-repeat: no-repeat;
   background-size: auto;
   float: center;
@@ -256,7 +257,7 @@ img {
   border: 1px solid #ccc;
   overflow: hidden;
   padding-bottom: 30px;
-  background-color: #212529;
+  background-color: #cfcfcf;
 }
 .chats {
   padding: 30px 15px 0 25px;

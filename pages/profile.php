@@ -15,12 +15,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <link rel="stylesheet" href="style.css" type=text/css>
      
-     <style>
-         footer
-         {
-            position: fixed !important;
-         }
-     </style>
 </head>
 
 <body>
@@ -58,7 +52,7 @@
                             <input type="text" name="bio" class="form-control" >
                         </div>
                         <div class="form-group">
-                            <input type="submit" name="update"  class="btn btn-info" value="Update">
+                            <input  type="submit" name="update"  class="btn btn-info" value="Update">
                         </div>
 
                     </form>

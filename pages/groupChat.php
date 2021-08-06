@@ -8,6 +8,26 @@
     <link rel="stylesheet" href="style.css" type="text/css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+
+    <style>
+        #video {
+            border: 1px solid #999;
+            width: 98%;
+            max-width: 860px;
+        }
+        .error {
+            color: red;
+        }
+  
+        .warn {
+            color: orange;
+        }
+  
+        .info {
+            color: darkgreen;
+        }
+    </style>
+
 </head>
 
 <body>
@@ -49,6 +69,21 @@
         </div>
 
         <div class="chat-page">
+            <div>
+                <!-- Screen sharing -->
+                <p><button id="start">Share your screen</button> <button id="stop">Stop sharing</button></p>
+  
+                <video id="video" autoplay></video>
+                <br>
+
+                <strong></strong>
+                <br>
+                <pre id="log"></pre>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+                <script src="../processing/ScreenSharing.js"></script>
+                <!-- -->
+            </div>
+
             <div class="msg-inbox">
                 <div class="chats">
                     <div class="msg-page">
@@ -67,8 +102,11 @@
                             <p></p>
                         </div>
                     </div>
+
+                    
                 </div>
             </div>
+            
             
             <form action="#" class='typing-area' method= "POST" autocomplete="off">   
                     <input type="text" name="outgoing_id" value="<?php echo $_SESSION['username']; ?>" hidden>

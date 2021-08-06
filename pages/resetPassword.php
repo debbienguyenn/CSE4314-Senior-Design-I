@@ -12,11 +12,11 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
   <link rel="stylesheet" href="style.css" type=text/css>
   <title>Reset Password - WatchBuddy</title>
-  <style>
+  <!-- <style>
       footer{
           position: fixed !important;
       }
-  </style>
+  </style> -->
 </head>
 
 <body>
