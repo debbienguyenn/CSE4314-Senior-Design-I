@@ -185,11 +185,12 @@
                     {
                         $buddies = $buddyname['BuddyID'];
                         echo $buddies;
-                        //add buttons to remove friend and chat here.. 
-                        echo "<a style=\"float: right\" \ href = ../processing/deletebuddy_action.php?buddyID=".$buddies."><img src=../images/icons/delete.png style='width:25px'></a>";
-                        echo "<a style=\"float: right\"  href = ../pages/chat.php?buddyID=".$buddies."><img src=../images/icons/chat.png style='width:25px'></a>";
-
-                        echo "<pre></pre>";
+                        print_r("  ");
+                        //add buttons to remove friend and chat here..
+                        echo "<a  href = ../processing/deletebuddy_action.php?buddyID=".$buddies."><img title='Unbuddy Me' id='dltBuddy' src=../images/icons/delete.png style='width:25px'></a>";
+                        print_r("  ");
+                        echo '<button title="Chat" id="chatBtn" style="height:20px; width:20px" onclick="window.open(\'../pages/chat.php?buddyID='.$buddies.'\',\'\',\'height=600,width=600,top=400\', false)"></button>';
+                        echo '<br>';
                     }
                     ?>
                 </div>

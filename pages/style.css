@@ -144,6 +144,24 @@ button:hover {
   opacity: 1;
 }
 
+#chatBtn{
+  cursor: pointer;
+  background-color: #fff;
+  background-image: url(../images/icons/chat.png);
+  background-repeat: no-repeat;
+  background-size: 35px 24px;
+}
+
+#chatBtn:hover{
+  opacity: 1;
+  color: rgb(8, 27, 112);
+  box-shadow: 0 5px 15px rgba(6, 235, 94, 0.4);
+}
+#dltBuddy:hover{
+  color: rgb(8, 27, 112);
+  box-shadow: 0 5px 15px rgba(228, 7, 7, 0.4);
+}
+
 /* Extra styles for the cancel button */
 .cancelbtn {
   padding: 14px 20px;
@@ -343,25 +361,3 @@ img {
 .talk {
   background: #008cba;
 }
-/*.input-group{
-    float: right;
-    margin-top: 13px;
-    margin-right: 20px;
-    outline: none !important;
-    border-radius: 20px;
-    width: 61% !important;
-    background-color: #fff;
-  }
-  .input-field{
-    border: none !important;
-    border-radius: 20px !important;
-  }
-  .input-group-text{
-    background: transparent !important;
-    border: none !important;
-  }
-  .input-field :focus{
-    border-color: none !important;
-    box-shadow: none !important;
-    border-radius: 20px;
-  }*/
