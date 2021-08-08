@@ -13,26 +13,31 @@
 <body>
     <div class="container">
         <div class="msg-header">
-            <div class="profile-pic">
-                <img src="../images/profile.jpg" alt="">
+            <div class="active">
+                <?php
+                    include("../processing/db.php");
+                    mysqli_select_db($conn, 'registration');
+                    mysqli_select_db($conn, 'chat');
+                    mysqli_select_db($conn, 'buddies');
+                    $username = $_SESSION['username'];
+                    $buddyVar = $_GET['buddyID'];
+                    $sql = mysqli_query($conn, "SELECT * FROM registration WHERE '$buddyVar' = registration.username");
+                    if(mysqli_num_rows($sql)>0){
+                        $row = mysqli_fetch_assoc($sql);
+                    }
+                ?>
+                <div class="profile-pic">
+                <img src="../images/users/<?php
+                        if(isset($row['userImage'])) 
+                            echo $row['userImage'];
+                        else
+                            echo 'default-profile-picture.png';
+                    ?>" alt="profile-picture">
+                </div>
+                <p><?php echo $row['firstname']." ".$row['lastname'] ?></p>
+
+
             </div>
-        <div class="active">
-            <?php
-                include("../processing/db.php");
-                mysqli_select_db($conn, 'registration');
-                mysqli_select_db($conn, 'chat');
-                mysqli_select_db($conn, 'buddies');
-                $username = $_SESSION['username'];
-                $buddyVar = $_GET['buddyID'];
-                $sql = mysqli_query($conn, "SELECT * FROM registration WHERE '$buddyVar' = registration.username");
-                if(mysqli_num_rows($sql)>0){
-                    $row = mysqli_fetch_assoc($sql);
-                }
-            ?>
-
-            <p><?php echo $row['firstname']." ".$row['lastname'] ?></p>
-
-        </div>
         </div>
 
         <div class="chat-page">
@@ -42,7 +47,7 @@
 
                     <div class="received-chats">
                     <div class="received-chats-img">
-                        <img src="../images/profile.jpg">
+                        <!-- <img src="../images/profile.jpg"> -->
                     </div>
                     <div class="received-msg-inbox">
                         <p></p>

@@ -19,9 +19,16 @@
                             </div>';
                 }
                 else{ // it is a receiver
+                    mysqli_select_db($conn, 'registration');
+                    $sentBy = $row['username'];
+                    $sql = mysqli_query($conn, "SELECT * FROM registration WHERE registration.username = '$sentBy'");
+                    if(mysqli_num_rows($sql)>0){
+                        $sender = mysqli_fetch_assoc($sql);
+                    }
+
                     $output .='<div class="received-chats">
                     <div class="received-chats-img">
-                        <img src="../images/profile.jpg">
+                        <img src="../images/users/'.$sender['userImage'].'">                    
                     </div>
                     <div class="received-msg-inbox">
                         <p>'.$row['msg'].'</p>

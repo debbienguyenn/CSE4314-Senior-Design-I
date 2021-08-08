@@ -18,7 +18,7 @@
     <nav style="width:1000px" class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
         
-      <a class="navbar-brand" href="homepage.php">Home</a>
+        <a class="navbar-brand" href="homepage.php">Home</a>
 
         <!-- dropdown menu for video categories -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -52,8 +52,8 @@
               </form>  
             </li>
           </ul>
-      </div>  
-      <!--Replace Login and Sign Up links when logged in-->
+
+        <!--Replace Login and Sign Up links when logged in-->
       <?php
         if(!isset($_SESSION['username']))
         {
@@ -74,6 +74,9 @@
           </div>';
         }
       ?>
+
+      </div>  
+      
           
 
     </nav>
