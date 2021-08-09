@@ -22,9 +22,6 @@ sendBtn.onclick = () => {
   };
 
   let formData = new FormData(form);
-  for (var value of formData.entries()) {
-    console.log(value);
-  }
   xhr.send(formData);
 };
 

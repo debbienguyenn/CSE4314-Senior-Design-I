@@ -44,14 +44,14 @@
                     ?>
                 </div>
 
-                <script>
+                <!-- <script>
                     function playVideo(link)
                     {
                         let videoBox = document.querySelector('#video-box');
                         videoBox.innerHTML = 
                         `<div class = "iframe-container"><iframe width="400" height="240" src="${link}?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>`;                    
                     }
-                </script>
+                </script> -->
 
                 <!-- -->
 

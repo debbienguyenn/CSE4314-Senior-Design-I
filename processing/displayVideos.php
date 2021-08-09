@@ -46,8 +46,12 @@
                         gyroscope; picture-in-picture" allowfullscreen></iframe>
                         </div>
                     </div>
-                    <img src="../images/icons/send-icon.png" style="width:20%; margin: auto" onclick="playVideo(\''.$link.'\', this)">
-
+                    <!-- <img src="../images/icons/send-icon.png" style="width:20%; margin: auto" onclick="playVideo(\''.$link.'\', this)"> -->
+                    <form action="#" class="videos-area" method= "POST" autocomplete="off">   
+                        <input type="text" name="link" value="'.$link.'" hidden>
+                        <input type="text" name="key" value="'.$key.'" hidden>
+                        <button type="submit" class="play-vid-b tn" style="width: 150px" ;>Play</button>
+                        </form>
                 </div>
                 &emsp;';
         }
