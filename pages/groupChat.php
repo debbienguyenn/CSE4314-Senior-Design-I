@@ -126,7 +126,7 @@
     </div>
 
     <script src="../processing/group-chat.js"></script>
-    
+    <script src="../processing/play-video.js"></script>
 </body>
 </html>
 

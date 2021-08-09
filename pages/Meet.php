@@ -161,7 +161,7 @@
                             }
                             echo $members['username'].",";
                         }
-                        echo '<button title="Chat" id="chatBtn" style="height:20px; width:20px" onclick="window.open(\'../pages/groupChat.php?key='.$room.'\',\'\',\'height=600,width=600,top=400\', false)"></button>';
+                        echo '<button title="Chat" id="chatBtn" style="height:20px; width:20px" onclick="window.open(\'../pages/groupChat.php?key='.$room.'\',\'\',\'height=600,width=600,top=400\')"></button>';
                         echo '<br>';
                     }
                     

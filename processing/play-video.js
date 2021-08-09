@@ -22,6 +22,10 @@ playVideoBtn.onclick = () => {
   };
 
   let formData = new FormData(videosArea);
+  for (var value of formData.entries())
+    {   
+      console.log(value); 
+    }
   xhr.send(formData);
 };
 
@@ -38,4 +42,4 @@ setInterval(() => {
   };
   let formData = new FormData(videosArea);
   xhr.send(formData);
-}, 500);
+}, 20000);
