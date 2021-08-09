@@ -5,8 +5,7 @@
        $roomID = mysqli_real_escape_string($conn, $_POST['key']);
         
        if(!empty($link)){
-           $sql = mysqli_query($conn, "INSERT INTO rooms (video) where roomID = '$roomID'
-                                VALUES ('$link')") or die();
+           $sql = mysqli_query($conn, "UPDATE rooms SET video='$link' WHERE roomID='$roomID'") or die();
        }
        else{
        }

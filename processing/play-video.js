@@ -1,5 +1,5 @@
 const videosArea = document.querySelector(".videos-area");
-const playVideoBtn = form.querySelector(".play-video-btn");
+const playVideoBtn = videosArea.querySelector(".play-video-btn");
 const videoBox = document.querySelector("#video-box");
 
 form.onsubmit = (e) => {
