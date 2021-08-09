@@ -108,11 +108,67 @@
                     $addKey = substr(md5(uniqid(rand(), 1)), 3, 10);
                     $key = $key . $addKey;
                     $form = 
-                    '<form class="form-container" action="../processing/createRoom.php?key='.$key.'" method="post" id="create-group">
-                        <button  type="submit" class="btn btn-success" style="width: 150px" ;>Create Group</button>
+                    '<form class="form-container" id="create-group" method="post">
+                        <button  type="submit" class="btn btn-success" name="roomBtn" style="width: 150px" ;>Create Group</button>
                     </form>';
                 echo $form;
+
+                echo '<h3 style="color:#8A2BE2;"> Rooms</h3>';
+
+                if(isset($_POST['roomBtn']))
+                {
+                    include("../processing/db.php");
+                    mysqli_select_db($conn, 'registration');
+                    mysqli_select_db($conn, 'chat');
+                    mysqli_select_db($conn, 'buddies');
+                    $username = $_SESSION['username'];
+
+                    $count = $_POST['count'];
+                    $buddies = array();
+                    for($i=0; $i<$count; $i++)
+                    {
+                        $buddies[]= $_POST[strval($i)];
+                    }
+
+                    //$key = $_GET["key"];
+
+                    //add users to room
+                    mysqli_select_db($conn, 'rooms');
+                    $current_user = $_SESSION['username'];
+                    $sql = "INSERT INTO rooms(roomID, username) VALUES('$key', '$current_user')";
+                    $query = mysqli_query($conn, $sql);
+                    foreach($buddies as $buddy ){
+                        $sql = "INSERT INTO rooms(roomID, username) VALUES('$key', '$buddy')";
+                        $query = mysqli_query($conn, $sql);
+                    }
+
+                    $roomList = array();
+                    $r = "SELECT * FROM rooms GROUP BY roomID";
+                    $query = mysqli_query($conn,$r);
+                    while($list = mysqli_fetch_assoc($query))
+                    {
+                        $roomList[] = $list;
+                    }
+
+                    foreach($roomList as $rlist)
+                    {
+                        $room = $rlist['roomID'];
+                        $mem = mysqli_query($conn, "SELECT * FROM rooms WHERE roomID = '$room'");
+                        while($members = mysqli_fetch_assoc($mem))
+                        {
+                            if(strcmp($members['username'],$username)==0){
+                                continue;
+                            }
+                            echo $members['username'].",";
+                        }
+                        echo '<button title="Chat" id="chatBtn" style="height:20px; width:20px" onclick="window.open(\'../pages/groupChat.php?key='.$room.'\',\'\',\'height=600,width=600,top=400\', false)"></button>';
+                        echo '<br>';
+                    }
+                    
+                }
             ?>
+
+            
             </div>
         </div>
     </section>
