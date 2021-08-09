@@ -13,7 +13,7 @@
             $row = mysqli_fetch_assoc($query);
             $output = '<div class = "iframe-container">
             <iframe width="400" height="240" 
-            src="'.$row['video'].'"title="YouTube video player" frameborder="0" 
+            src="'.$row['video'].'?autoplay=1&mute=1"title="YouTube video player" frameborder="0" 
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
             gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>';

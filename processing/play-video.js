@@ -42,4 +42,4 @@ setInterval(() => {
   };
   let formData = new FormData(videosArea);
   xhr.send(formData);
-}, 20000);
+}, 10000);
