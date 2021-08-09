@@ -82,19 +82,3 @@
     </nav>
   </div>
 </div>
-    <!-- </body>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="script.js"></script>  
-</html> -->
-  
-    
-          
-<!-- </div>
-
-            <nav class="navbar navbar-light bg-light">
-  <form method ="POST" action="../processing/searchedvideos.php" >
-    <input class="form-control mr-sm-2" type="search" name="search-term" placeholder="Search" aria-label="Search">
-    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-  </form>
-</nav>
-</div> -->

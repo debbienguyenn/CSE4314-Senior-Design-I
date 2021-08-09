@@ -4,6 +4,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chat</title>
     <link rel="stylesheet" href="style.css" type="text/css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css">
@@ -14,6 +16,7 @@
     <div class="container">
         <div class="msg-header">
             <div class="active">
+                <!-- Get buddy info -->
                 <?php
                     include("../processing/db.php");
                     mysqli_select_db($conn, 'registration');
@@ -39,16 +42,14 @@
 
             </div>
         </div>
-
+        <!-- Chat box -->
         <div class="chat-page">
             <div class="msg-inbox">
                 <div class="chats">
                     <div class="msg-page">
 
                     <div class="received-chats">
-                    <div class="received-chats-img">
-                        <!-- <img src="../images/profile.jpg"> -->
-                    </div>
+                    <div class="received-chats-img"></div>
                     <div class="received-msg-inbox">
                         <p></p>
                     </div>
@@ -61,19 +62,16 @@
                     </div>
                 </div>
             </div>
-
+            <!-- typing area -->
             <form action="#" class='typing-area' method= "POST" autocomplete="off">   
                     <input type="text" name="outgoing_id" value="<?php echo $_SESSION['username']; ?>" hidden>
                     <input type="text" name="incoming_id" value="<?php echo $buddyVar; ?>" hidden>       
                     <input type="text" name="message" class="input-field" placeholder="Type here.....">
                     
-                    <!-- <button><i type="button" class="button">Send</i></button> -->
                     <button type="submit" class="button" style="width: 150px" ;>Send</button>
             </form>
         </div>
     </div>
-
-  
 
     <script src="../processing/chat.js"></script>
 

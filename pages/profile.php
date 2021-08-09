@@ -143,17 +143,7 @@
                         </div>
                     </div>
                 </form>
-
-
-
-
-                    <!-- Button is used to direct users to the buddies page for add and deleting friends. Not currently being used. Delete before submission.
-                        <button style="width:300px" class="btn btn-outline-success" type="submit" id="button_clicked"href="Buddies.php">Find Buddies</button>
-                    -->
-
                     <?php
-                    
-
                     //get current friends of the user to create buddies list
                     mysqli_select_db($conn, 'buddies');
                     $username = $_SESSION['username'];

@@ -38,7 +38,6 @@ if(isset($_POST['update'])){
                         $sql = "UPDATE registration SET bio='$bio',userImage='$imageName' WHERE username = '$loggedInUser'";
 
                         $results = mysqli_query($conn,$sql);
-                        //echo '<script>alert("Profile Details Successfully Updated!")<\Script>';
                         $_SESSION['userImage'] = $imageName;
                         $_SESSION['bio'] = $bio;
                         echo '<script>window.location=\'../pages/profile.php\'</script>';                    
