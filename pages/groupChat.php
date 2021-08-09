@@ -4,55 +4,59 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Chat</title>
+    <title>Group Chat</title>
     <link rel="stylesheet" href="style.css" type="text/css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
-
-    <!-- <style>
-        #video {
-            border: 1px solid #999;
-            width: 100;
-            width:1296px;
-        }
-        .error {
-            color: red;
-        }
-  
-        .warn {
-            color: orange;
-        }
-  
-        .info {
-            color: darkgreen;
-        }
-        .start, .stop{
-            width: 100px;
-        }
-    </style> -->
 
 </head>
 
 <body>
     <div class="container"> 
         <div class="chat-page">
-            <!-- <div>
-                <button id="start">Share your screen</button>
-                <button id="stop">Stop sharing</button>
-  
-                <video id="video" autoplay></video>
-                <br>
-
-                <strong></strong>
-                <br>
-                <pre id="log" hidden></pre>
-                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-                <script src="../processing/ScreenSharing.js"></script>               
-            </div> -->
             <div class="row">
-                <div class="col-7">
+                <!-- Videos section -->
+                <div class="col-3">
+                    <?php
+                        $group = true;
 
-                    <!-- message box -->
+                        include("../processing/db.php");
+                        mysqli_select_db($conn, 'rooms');
+                        $key = $_GET['key'];
+                        $buddies_query = "SELECT username from rooms where roomID = '$key'";
+                        $buddies_result = mysqli_query($conn, $buddies_query);
+                        $buddies_list = array();
+                        if(mysqli_num_rows($buddies_result)>0)
+                        {
+                            while($list = mysqli_fetch_assoc($buddies_result))
+                            {
+                                $buddies_list[] = $list;
+                            }
+                        }
+
+                        foreach($buddies_list as $buddy ){
+                            $username = $buddy['username'];
+                            echo '<h3>'.$username.'</h3>';
+                            echo '<pre></pre>';
+                            include '../processing/displayVideos.php';
+                        }
+
+                    ?>
+                </div>
+
+                <script>
+                    function playVideo(link)
+                    {
+                        let videoBox = document.querySelector('#video-box');
+                        videoBox.innerHTML = 
+                        `<div class = "iframe-container"><iframe width="400" height="240" src="${link}?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>`;                    
+                    }
+                </script>
+
+                <!-- -->
+
+                <!-- message box -->
+                <div class="col-9">
                     <div class="row">
                         <div class="msg-header">
                             <div class="profile-pic">
@@ -60,20 +64,6 @@
                             </div>
                             <div class="active">
                                 <?php
-
-                                    include("../processing/db.php");
-                                    mysqli_select_db($conn, 'rooms');
-                                    $key = $_GET['key'];
-                                    $buddies_query = "SELECT username from rooms where roomID = '$key'";
-                                    $buddies_result = mysqli_query($conn, $buddies_query);
-                                    $buddies_list = array();
-                                    if(mysqli_num_rows($buddies_result)>0)
-                                    {
-                                        while($list = mysqli_fetch_assoc($buddies_result))
-                                        {
-                                            $buddies_list[] = $list;
-                                        }
-                                    }
                                     
                                     echo '<p>';
                                     foreach($buddies_list as $buddy ){
@@ -85,6 +75,8 @@
                             </div>
                         </div>
                         
+                        <div class="card" id="video-box"></div>
+
                         <div class="msg-inbox">
                             <div class="chats">
                                 <div class="msg-page">
@@ -124,21 +116,17 @@
                             <button type="submit" class="button" style="width: 150px" ;>Send</button>
                         </form>
                     </div>
-                    <!-- -->
-
                 </div>
-
-                <!-- Videos section -->
-                <div class="col-3">
-                    <?php include '../processing/displayVideos.php' ?>
-                </div>
-                <!-- -->
+                 <!-- -->
+            </div>
+                
             </div>
             
         </div>
     </div>
 
     <script src="../processing/group-chat.js"></script>
-
+    
 </body>
 </html>
+

@@ -2,7 +2,7 @@
     include('../processing/db.php');
     //get saved video ID list
     mysqli_select_db($conn, 'likedVideos');
-    $username = $_SESSION['username'];
+    
     $video_query = "SELECT videoID from likedVideos where username = '$username' ";
     $video_result = mysqli_query($conn, $video_query);
     $video_list = array();
@@ -34,8 +34,26 @@
     foreach($link_list as $links)
     {
     $link = $links['link'];
-    
-        $html = '<div class="row">
+
+        if(isset($group))
+        {
+            $html = '<div class="row">
+                    <div class="card">
+                        <div class = "iframe-container">
+                        <iframe width="400" height="240" 
+                        src="'.$link.'"title="YouTube video player" frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
+                        gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <img src="../images/icons/send-icon.png" style="width:20%; margin: auto" onclick="playVideo(\''.$link.'\', this)">
+
+                </div>
+                &emsp;';
+        }
+        else
+        {
+            $html = '<div class="row">
                     <div class="card">
                         <div class = "iframe-container">
                         <iframe width="400" height="240" 
@@ -54,6 +72,7 @@
                     </div>
                 </div>
                 &emsp;';
+        }
         echo $html;
     }
 ?>

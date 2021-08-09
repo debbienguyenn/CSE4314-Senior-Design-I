@@ -12,7 +12,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../css-bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="style.css" type=text/css>
-    <title>Available Vidoes</title>
+    <title>Anime Videos</title>
 
 </head>
 <body>

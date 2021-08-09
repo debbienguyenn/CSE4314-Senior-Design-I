@@ -61,7 +61,10 @@
                 <!--middle column-->
                 <div class="col-6">
                     <h1 style="color:3F454C; text-align: center;">Watch List</h1>
-                    <?php include '../processing/displayVideos.php' ?>
+                    <?php 
+                        $username = $_SESSION['username'];
+                        include '../processing/displayVideos.php' 
+                    ?>
                 </div>
 
                 <!--third column-->
