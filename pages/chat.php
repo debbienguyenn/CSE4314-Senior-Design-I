@@ -39,6 +39,9 @@
                 </div>
                 <p><?php echo $row['firstname']." ".$row['lastname'] ?></p>
 
+                <?php
+                    mysqli_query($conn,"UPDATE chat SET chat_status=1 WHERE toUser='$username' AND fromUser='$buddyVar'");
+                ?>
 
             </div>
         </div>
@@ -72,7 +75,8 @@
             </form>
         </div>
     </div>
-
+    
+    <script> opener.location.reload(); </script>
     <script src="../processing/chat.js"></script>
 
 </body>

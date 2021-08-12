@@ -185,11 +185,20 @@
                         //add buttons to remove friend and chat here..
                         echo "<a  href = ../processing/deletebuddy_action.php?buddyID=".$buddies."><img title='Unbuddy Me' id='dltBuddy' src=../images/icons/delete.png style='width:25px'></a>";
                         print_r("  ");
-                        echo '<button title="Chat" id="chatBtn" style="height:20px; width:20px" onclick="window.open(\'../pages/chat.php?buddyID='.$buddies.'\',\'\',\'height=600,width=600,top=400\', false)"></button>
-                                <span class="badge" id="notify" style=" color:red;font-weight:bold; border-radius: 50px;
+                        $sql = mysqli_query($conn, "SELECT chat_status FROM chat WHERE chat_status=0 AND toUser = '$username' AND fromUser='$buddies'");
+                        if(mysqli_num_rows($sql)>0)
+                        {
+                            $unread_count = mysqli_num_rows($sql);
+                        }
+                        else{
+                            $unread_count = null;
+                        }
+
+                        echo '<button title="Chat" name="chatBt" id="chatBtn" value= '.$buddies.' style="height:20px; width:20px" onclick="window.open(\'../pages/chat.php?buddyID='.$buddies.'\',\'\',\'height=600,width=600,top=400\', false)"></button>
+                                <span class="badge" id="notify" style=" background-color:red; color:white;font-weight:bold; border-radius: 50px;
                                 position: relative;
                                 top: -10px;
-                                left: -20px;" >5</span>';
+                                left: -20px;" >'.$unread_count.'</span>';
                         echo '<br>';
                     }
                     ?>
@@ -203,7 +212,6 @@
 <script>
 $('#button_clicked').on('click', function() { window.location = '../processing/Buddies.php'; });
 </script>
-
 
 
 <?php
