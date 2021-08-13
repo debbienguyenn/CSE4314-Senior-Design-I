@@ -44,6 +44,11 @@
                         }
 
                     ?>
+
+                    <?php
+                        mysqli_query($conn,"UPDATE groupchat SET chat_status=1 WHERE username!='$username' AND roomID='$key'");
+                    ?>
+
                 </div>
 
                 <!-- <script>
@@ -114,6 +119,7 @@
         </div>
     </div>
 
+    <script> opener.location.reload(); </script>
     <script src="../processing/group-chat.js"></script>
     <script src="../processing/play-video.js"></script>
 </body>
