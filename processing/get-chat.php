@@ -24,15 +24,27 @@
                     if(mysqli_num_rows($sql)>0){
                         $sender = mysqli_fetch_assoc($sql);
                     }
-
-                    $output .='<div class="received-chats">
-                    <div class="received-chats-img">
-                        <img src="../images/users/'.$sender['userImage'].'">
-                    </div>
-                    <div class="received-msg-inbox">
-                        <p>'.$row['msg'].'</p>
-                    </div>
-                    </div>';
+                    if(isset($sender['userImage']))
+                    {
+                        $output .='<div class="received-chats">
+                        <div class="received-chats-img">
+                            <img src="../images/users/'.$sender['userImage'].'">
+                        </div>
+                        <div class="received-msg-inbox">
+                            <p>'.$row['msg'].'</p>
+                        </div>
+                        </div>';
+                    }
+                    else{
+                        $output .='<div class="received-chats">
+                        <div class="received-chats-img">
+                            <img src="../images/users/default-profile-picture.png">
+                        </div>
+                        <div class="received-msg-inbox">
+                            <p>'.$row['msg'].'</p>
+                        </div>
+                        </div>';
+                    }
                 }
             }
             echo $output;

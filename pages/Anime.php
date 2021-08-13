@@ -13,7 +13,11 @@
     <link rel="stylesheet" href="../css-bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="style.css" type=text/css>
     <title>Anime Videos</title>
-
+    <style>
+        footer{
+            position: fixed !important;
+        }
+    </style>
 </head>
 <body>
     <section>
