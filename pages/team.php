@@ -22,7 +22,7 @@
 	<div class="row justify-content-center">
 		<div class="col-3">
 		<div class="card">
-			<img src=".jpg" alt="Jane" style="width:60%">
+			<img src="../images/tuyen.jpg" alt="Jane" style="width:60%">
 			<div class="container">
 			<h2>Tuyen Hoang</h2>
 			<p class="title">CEO &amp; Founder</p>
@@ -37,7 +37,7 @@
 	
 		<div class="col-3">
 		<div class="card">
-			<img src="abc.jpg" alt="Mike" style="width:60%">
+			<img src="../images/abc.jpg" alt="Mike" style="width:60%">
 			<div class="container">
 			<h2>Lincoln Bhattarai</h2>
 			<p class="title">Art Director</p>
@@ -52,7 +52,7 @@
 	
 		<div class="col-3">
 		<div class="card">
-			<img src="kapil.jpg" alt="John" style="width:60%">
+			<img src="../images/kapil.jpg" alt="John" style="width:60%">
 			<div class="container">
 			<h2>Kapil Thapa</h2>
 			<p class="title">Designer</p>
@@ -69,7 +69,7 @@
 	<div class="row justify-content-center">
 		<div class="col-3">
 			<div class="card">
-			<img src="nilesh.jpg" alt="John" style="width:60%">
+			<img src="../images/nilesh.jpg" alt="John" style="width:60%">
 			<div class="container">
 				<h2>Nilesh Dhakal</h2>
 				<p class="title">Designer</p>
@@ -87,7 +87,7 @@
 
 		<div class="col-3">
 			<div class="card">
-			<img src="debbie.jpg" alt="John" style="width:60%">
+			<img src="../images/debbie.jpg" alt="John" style="width:60%">
 			<div class="container">
 				<h2>Debbie Nguyen</h2>
 				<p class="title">Designer</p>
