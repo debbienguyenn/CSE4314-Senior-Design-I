@@ -3,7 +3,7 @@
 session_start();
 
 // $id =   $_POST['id'];
-$id = $_GET[id];
+$id = $_GET['id'];
 $username = $_SESSION['username'];
 include('db.php');
 mysqli_select_db($conn, 'likedVideos');
