@@ -1,7 +1,7 @@
-const form = document.querySelector('.typing-area'),
-inputField = form.querySelector('.input-field'),
-sendBtn = form.querySelector('.button'),
-chatBox = document.querySelector('.msg-page');
+const form = document.querySelector(".typing-area"),
+  inputField = form.querySelector(".input-field"),
+  sendBtn = form.querySelector(".button"),
+  chatBox = document.querySelector(".msg-page");
 
 form.onsubmit = (e) => {
   e.preventDefault();
@@ -11,20 +11,18 @@ sendBtn.onclick = () => {
   // Ajax start
   var xhr = new XMLHttpRequest();
   xhr.open("POST", "../processing/insert-chat.php", true);
-  xhr.onload = function() {
+  xhr.onload = function () {
     if (xhr.readyState === 4) {
-      if (xhr.status === 200) {        
+      if (xhr.status === 200) {
         inputField.value = ""; // after inserting into database the box is blank
         scrollToBottom();
-      }      
+      }
     }
-  }
+  };
 
   let formData = new FormData(form);
   xhr.send(formData);
-
 };
-
 
 setInterval(() => {
   let xhr = new XMLHttpRequest();
@@ -42,5 +40,5 @@ setInterval(() => {
 }, 500);
 
 function scrollToBottom() {
-chatBox.scrollTo(0,chatBox.scrollHeight);
+  chatBox.scrollTo(0, chatBox.scrollHeight);
 }

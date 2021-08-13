@@ -15,6 +15,8 @@
 <html lang="en">
 
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title> WatchBuddy - Buddies Page</title>
   <link rel="stylesheet" href="css-bootstrap/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
@@ -59,48 +61,5 @@
     </section>
 
 </body>
-
-<!--
-script for searching for a buddy using autocomplete search textbox
-<script>  
- $(document).ready(function(){  
-      $('#buddy').keyup(function(){  
-           var query = $(this).val();
-           $_SESSION['query'] = query;  
-           if(query != '' || query != 8 || query != 46)  
-           {  
-                $.ajax({  
-                     url:"search_action.php",  
-                     method:"POST",  
-                     data:{query:query},  
-                     success:function(data)  
-                     {  
-                          /*comment by Debbie: not fading out when search is empty after typing something. FIX*/
-                          //fixed: 06/18/2021
-                          if($('#buddy').val() == '')
-                          {
-                            $('#buddiesList').fadeOut(); 
-                          }
-                          else
-                          {
-                            $('#buddiesList').fadeIn();  
-                            $('#buddiesList').html(data);
-                          } 
-                     }  
-                });  
-           }
-
-      });  
-      //$(document).on('click', 'button', function()
-      $(document).on('click', 'li', function()
-      {  
-          /*When user searches and clicks buddy name on results, it changes the text in search-bar to the button name for now*/
-          /*Change and add to this portion - connect to database to add/delete friends*/
-           $('#buddy').val($(this).text());
-           $('#buddiesList').fadeOut();  
-      }); 
-      
- });  
- </script> -->
 </html>
 

@@ -13,10 +13,11 @@
 <div class="container">
   <div class="navbar">
     <a href="Homepage.php">
-      <image src="../images/logo.jpg" class="logo"></image>
+      <image src="../images/logo.png" class="logo"></image>
     </a>
     <nav style="width:1000px" class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
+        
         <a class="navbar-brand" href="homepage.php">Home</a>
 
         <!-- dropdown menu for video categories -->
@@ -43,7 +44,6 @@
               </ul>
             </li>
 
-            <button class="room" type="button"> My Room</button>
             <!--search bar-->
             <li>
               <form id=form class="d-flex" method ="POST" action="VideoSearchResults.php">
@@ -53,8 +53,8 @@
               </form>  
             </li>
           </ul>
-      </div>  
-      <!--Replace Login and Sign Up links when logged in-->
+
+        <!--Replace Login and Sign Up links when logged in-->
       <?php
         if(!isset($_SESSION['username']))
         {
@@ -75,24 +75,11 @@
           </div>';
         }
       ?>
+
+      </div>  
+      
           
 
     </nav>
   </div>
 </div>
-    <!-- </body>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="script.js"></script>  
-</html> -->
-  
-    
-          
-<!-- </div>
-
-            <nav class="navbar navbar-light bg-light">
-  <form method ="POST" action="../processing/searchedvideos.php" >
-    <input class="form-control mr-sm-2" type="search" name="search-term" placeholder="Search" aria-label="Search">
-    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-  </form>
-</nav>
-</div> -->
