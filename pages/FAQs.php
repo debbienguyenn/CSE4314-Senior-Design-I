@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="FAQs.css">
 </head>
 <body>
+    <?php
+      include('navbar.php');
+    ?>
 
     <div class="box">
         <p class="heading "> FAQs</p>
@@ -36,5 +39,6 @@
 
     </div>
     
-</body>
-</html>
+    <?php
+        include('footer.php');
+    ?>

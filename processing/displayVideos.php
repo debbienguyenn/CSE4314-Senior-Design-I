@@ -50,30 +50,32 @@
                     <form action="#" class="videos-area" method= "POST" autocomplete="off">   
                         <input type="text" name="link" value="'.$link.'" hidden>
                         <input type="text" name="key" value="'.$key.'" hidden>
-                        <button type="submit" class="play-video-btn" style="width: 150px" ;>Play</button>
+                        <button type="submit" class="play-video-btn" style="width: 100px" ;>Share</button>
                         </form>
+                        
                 </div>
                 &emsp;';
         }
         else
         {
             $html = '<div class="row">
-                    <div class="card">
-                        <div class = "iframe-container">
-                        <iframe width="400" height="240" 
-                        src="'.$link.'"title="YouTube video player" frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
-                        gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <div class="card">
+                            <div class = "iframe-container">
+                            <iframe width="400" height="240" 
+                            src="'.$link.'"title="YouTube video player" frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
+                            gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
                         </div>
-                    </div>
-                    <div>
-                        <form action="../processing/unsave.php" method="POST">
-                            <input class="btn btn-outline-danger""
-                            type="submit" id="button"
-                            name="unlike_button" value="Remove" style="float: right;">
-                            <input type=text name="unliked" value="'.$link.'" hidden>
-                        </form>
-                    </div>
+                        <div>
+                            <form action="../processing/unsave.php" method="POST">
+                                <input class="btn btn-outline-danger""
+                                type="submit" id="button"
+                                name="unlike_button" value="Remove" style="float: right;">
+                                <input type=text name="unliked" value="'.$link.'" hidden>
+                            </form>
+                        </div>
+                        
                 </div>
                 &emsp;';
         }

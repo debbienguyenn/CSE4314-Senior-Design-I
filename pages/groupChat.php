@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="style.css" type="text/css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -19,6 +19,7 @@
             <div class="row">
                 <!-- Videos section -->
                 <div class="col-3">
+                    <button id="stream" style="background-color: red; width:100px">Stream</button>
                     <?php
                         $group = true;
 
@@ -35,7 +36,7 @@
                                 $buddies_list[] = $list;
                             }
                         }
-
+                        
                         foreach($buddies_list as $buddy ){
                             $username = $buddy['username'];
                             echo '<h3>'.$username.'</h3>';
