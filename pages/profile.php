@@ -194,7 +194,7 @@
                             $unread_count = null;
                         }
 
-                        echo '<button title="Chat" name="chatBt" id="chatBtn" value= '.$buddies.' style="height:20px; width:20px" onclick="window.open(\'../pages/chat.php?buddyID='.$buddies.'\',\'\',\'height=600,width=600,top=400\', false)"></button>
+                        echo '<button title="Chat" name="chatBt" id="chatBtn" value= '.$buddies.' style="height:20px; width:20px;" onclick="window.open(\'../pages/chat.php?buddyID='.$buddies.'\',\'\',\'height=600,width=600,top=400\', false)"></button>
                                 <span class="badge" id="notify" style=" background-color:red; color:white;font-weight:bold; border-radius: 50px;
                                 position: relative;
                                 top: -10px;

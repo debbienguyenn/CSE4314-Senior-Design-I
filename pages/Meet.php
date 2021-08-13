@@ -144,7 +144,21 @@
                                 }
                                 echo $members['username'].",";
                             }
-                            echo '<button title="Chat" id="chatBtn" style="height:20px; width:20px; float: right; margin-right:0" onclick="window.open(\'../pages/groupChat.php?key='.$roomID.'\',\'\',\'height=600,width=600,top=400\')"></button>';
+
+                            $sql = mysqli_query($conn, "SELECT chat_status FROM groupchat WHERE chat_status=0 AND username != '$username' AND roomID='$roomID'");
+                            if(mysqli_num_rows($sql)>0)
+                            {
+                                $unread_count = mysqli_num_rows($sql);
+                            }
+                            else{
+                                $unread_count = null;
+                            }
+
+                            echo '<button title="Chat" id="chatBtn" style="height:20px; width:20px;" onclick="window.open(\'../pages/groupChat.php?key='.$roomID.'\',\'\',\'height=600,width=600,top=400\')"></button>
+                                    <span class="badge" id="notify" style=" background-color:red; color:white;font-weight:bold; border-radius: 50px;
+                                    position: relative;
+                                    top: -10px;
+                                    left: -20px;" >'.$unread_count.'</span>';
                             echo '<pre></pre>';
                         } 
     
